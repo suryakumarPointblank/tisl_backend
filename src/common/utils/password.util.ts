@@ -1,0 +1,13 @@
+import { Injectable } from '@nestjs/common';
+import bcrypt from 'bcrypt';
+
+@Injectable()
+export class PasswordUtil {
+  async hash(password: string): Promise<string> {
+    return bcrypt.hash(password, 12);
+  }
+
+  async compare(plain: string, hash: string): Promise<boolean> {
+    return bcrypt.compare(plain, hash);
+  }
+}

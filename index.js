@@ -1,3 +1,6 @@
 require('reflect-metadata');
-require('@swc-node/register');
+require('ts-node').register({
+  project: './tsconfig.json',
+  transpileOnly: false,
+});
 require('./src/main');
