@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body, UseGuards, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Get, Body, UseGuards, HttpCode, HttpStatus, Inject } from '@nestjs/common';
 import { ApiTags, ApiBearerAuth, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { AuthService } from './auth.service.js';
 import { RegisterDto } from './dto/register.dto.js';
@@ -12,7 +12,7 @@ import { GetUser } from '../../common/decorators/get-user.decorator.js';
 @ApiTags('Auth')
 @Controller('api/v1/auth')
 export class AuthController {
-  constructor(authService) {
+  constructor(@Inject(AuthService) authService) {
     this.authService = authService;
   }
 

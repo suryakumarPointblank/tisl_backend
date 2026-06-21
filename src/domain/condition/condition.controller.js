@@ -1,11 +1,11 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Inject } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiParam } from '@nestjs/swagger';
 import { ConditionService } from './condition.service.js';
 
 @ApiTags('Conditions')
 @Controller('api/v1/conditions')
 export class ConditionController {
-  constructor(conditionService) {
+  constructor(@Inject(ConditionService) conditionService) {
     this.conditionService = conditionService;
   }
 

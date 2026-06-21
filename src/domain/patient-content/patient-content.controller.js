@@ -1,11 +1,11 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query, Inject } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiQuery, ApiParam } from '@nestjs/swagger';
 import { PatientContentService } from './patient-content.service.js';
 
 @ApiTags('Patient Content')
 @Controller('api/v1/patient-content')
 export class PatientContentController {
-  constructor(patientContentService) {
+  constructor(@Inject(PatientContentService) patientContentService) {
     this.patientContentService = patientContentService;
   }
 

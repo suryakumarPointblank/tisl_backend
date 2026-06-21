@@ -1,11 +1,11 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query, Inject } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiQuery, ApiParam } from '@nestjs/swagger';
 import { WebinarService } from './webinar.service.js';
 
 @ApiTags('Webinars')
 @Controller('api/v1/webinars')
 export class WebinarController {
-  constructor(webinarService) {
+  constructor(@Inject(WebinarService) webinarService) {
     this.webinarService = webinarService;
   }
 

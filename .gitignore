@@ -11,3 +11,5 @@ coverage/
 package-lock.json
 
 .claude/
+swagger-spec.json
+swagger-boot*.log

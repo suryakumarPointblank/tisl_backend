@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Param, Query, Body, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Param, Query, Body, UseGuards, Inject } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiQuery, ApiParam, ApiBearerAuth } from '@nestjs/swagger';
 import { ContentItemService } from './content-item.service.js';
 import { OptionalJwtGuard } from '../../common/guards/optional-jwt.guard.js';
@@ -7,7 +7,7 @@ import { GetUser } from '../../common/decorators/get-user.decorator.js';
 @ApiTags('Content Items')
 @Controller('api/v1/content-items')
 export class ContentItemController {
-  constructor(contentItemService) {
+  constructor(@Inject(ContentItemService) contentItemService) {
     this.contentItemService = contentItemService;
   }
 

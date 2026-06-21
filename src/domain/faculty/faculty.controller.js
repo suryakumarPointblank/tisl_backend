@@ -1,11 +1,11 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param, Inject } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiParam } from '@nestjs/swagger';
 import { FacultyService } from './faculty.service.js';
 
 @ApiTags('Faculty')
 @Controller('api/v1/faculty')
 export class FacultyController {
-  constructor(facultyService) {
+  constructor(@Inject(FacultyService) facultyService) {
     this.facultyService = facultyService;
   }
 

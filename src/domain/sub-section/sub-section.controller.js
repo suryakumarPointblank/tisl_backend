@@ -1,11 +1,11 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query, Inject } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiQuery, ApiParam } from '@nestjs/swagger';
 import { SubSectionService } from './sub-section.service.js';
 
 @ApiTags('Sub Sections')
 @Controller('api/v1/sub-sections')
 export class SubSectionController {
-  constructor(subSectionService) {
+  constructor(@Inject(SubSectionService) subSectionService) {
     this.subSectionService = subSectionService;
   }
 

@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body, Query, UseGuards } from '@nestjs/common';
+import { Controller, Post, Get, Body, Query, UseGuards, Inject } from '@nestjs/common';
 import { ApiTags, ApiBearerAuth, ApiOperation, ApiQuery } from '@nestjs/swagger';
 import { ContentLikeService } from './content-like.service.js';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard.js';
@@ -7,7 +7,7 @@ import { GetUser } from '../../common/decorators/get-user.decorator.js';
 @ApiTags('Content Likes')
 @Controller('api/v1/content-likes')
 export class ContentLikeController {
-  constructor(contentLikeService) {
+  constructor(@Inject(ContentLikeService) contentLikeService) {
     this.contentLikeService = contentLikeService;
   }
 
