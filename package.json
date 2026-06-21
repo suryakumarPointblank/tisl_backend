@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@azure/communication-email": "^1.1.0",
-    "@influxdata/influxdb3-client": "^2.3.0",
     "@nestjs/axios": "^4.0.1",
     "@nestjs/bull": "^11.0.4",
     "@nestjs/common": "^11.0.1",
@@ -61,6 +60,8 @@
     "@babel/register": "7.28.6",
     "@babel/runtime": "7.29.2",
     "@nestjs/testing": "^11.0.1",
+    "@swc-node/register": "^1.11.1",
+    "@swc/core": "^1.15.41",
     "jest": "30.3.0",
     "nodemon": "3.1.14",
     "prettier": "3.8.3",
