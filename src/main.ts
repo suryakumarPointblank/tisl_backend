@@ -40,7 +40,7 @@ async function bootstrap(): Promise<void> {
     )
     .addTag('Auth', 'Authentication endpoints')
     .addTag('Users', 'User management endpoints')
-    .addServer(process.env.API_URL || 'http://localhost:3001', 'Development Server')
+    .addServer(process.env.API_URL || 'http://localhost:5000', 'Development Server')
     .build();
 
   const document = SwaggerModule.createDocument(app, swaggerConfig);
