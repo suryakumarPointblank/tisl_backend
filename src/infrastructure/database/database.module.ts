@@ -13,6 +13,13 @@ import { ConditionEntity } from '../../domain/condition/condition.entity';
 import { PatientContentEntity } from '../../domain/patient-content/patient-content.entity';
 import { WebinarEntity } from '../../domain/webinar/webinar.entity';
 import { RefreshTokenEntity } from '../../application/auth/refresh-token.entity';
+import { ContactInquiryEntity } from '../../domain/contact-inquiry/contact-inquiry.entity';
+import { CaseSubmissionEntity } from '../../domain/case-submission/case-submission.entity';
+import { SlideDeckRequestEntity } from '../../domain/slide-deck-request/slide-deck-request.entity';
+import { WebinarRegistrationEntity } from '../../domain/webinar-registration/webinar-registration.entity';
+import { TrainingProgramEntity } from '../../domain/training-program/training-program.entity';
+import { TrainingProgramBatchEntity } from '../../domain/training-program/training-program-batch.entity';
+import { TrainingProgramRegistrationEntity } from '../../domain/training-program-registration/training-program-registration.entity';
 
 @Module({
   imports: [
@@ -39,6 +46,13 @@ import { RefreshTokenEntity } from '../../application/auth/refresh-token.entity'
           ConditionEntity,
           PatientContentEntity,
           WebinarEntity,
+          ContactInquiryEntity,
+          CaseSubmissionEntity,
+          SlideDeckRequestEntity,
+          WebinarRegistrationEntity,
+          TrainingProgramEntity,
+          TrainingProgramBatchEntity,
+          TrainingProgramRegistrationEntity,
         ],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: configService.get('NODE_ENV') === 'development',

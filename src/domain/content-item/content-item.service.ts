@@ -31,6 +31,20 @@ export class ContentItemService {
     return qb.orderBy('ci.publishedAt', 'DESC').getMany();
   }
 
+  async findByFaculty(facultyId: string): Promise<ContentItemEntity[]> {
+    this.logger.log('Fetching content items by faculty', { facultyId });
+    return this.contentItemRepository
+      .createQueryBuilder('ci')
+      .leftJoinAndSelect('ci.faculty', 'faculty')
+      .leftJoinAndSelect('ci.topic', 'topic')
+      .leftJoinAndSelect('topic.subSection', 'subSection')
+      .leftJoinAndSelect('subSection.therapyArea', 'therapyArea')
+      .where('ci.facultyId = :facultyId', { facultyId })
+      .andWhere('ci.isActive = true')
+      .orderBy('ci.publishedAt', 'DESC')
+      .getMany();
+  }
+
   async findById(id: string): Promise<ContentItemEntity> {
     this.logger.log('Fetching content item by id', { id });
     const item = await this.contentItemRepository.findOne({

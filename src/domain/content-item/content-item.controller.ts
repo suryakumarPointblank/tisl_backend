@@ -20,6 +20,13 @@ export class ContentItemController {
     return this.contentItemService.findByTopic(topicId, { contentType });
   }
 
+  @Get('by-faculty/:facultyId')
+  @ApiOperation({ summary: 'Get content items by faculty' })
+  @ApiParam({ name: 'facultyId' })
+  findByFaculty(@Param('facultyId') facultyId: string) {
+    return this.contentItemService.findByFaculty(facultyId);
+  }
+
   @Get(':id')
   @ApiOperation({ summary: 'Get content item by id' })
   @ApiParam({ name: 'id' })
