@@ -20,6 +20,9 @@ import { WebinarRegistrationEntity } from '../../domain/webinar-registration/web
 import { TrainingProgramEntity } from '../../domain/training-program/training-program.entity';
 import { TrainingProgramBatchEntity } from '../../domain/training-program/training-program-batch.entity';
 import { TrainingProgramRegistrationEntity } from '../../domain/training-program-registration/training-program-registration.entity';
+import { UserFavoriteEntity } from '../../domain/user-favorite/user-favorite.entity';
+import { SpecialityEntity } from '../../domain/speciality/speciality.entity';
+import { SiteConfigEntity } from '../../domain/site-config/site-config.entity';
 
 @Module({
   imports: [
@@ -53,6 +56,9 @@ import { TrainingProgramRegistrationEntity } from '../../domain/training-program
           TrainingProgramEntity,
           TrainingProgramBatchEntity,
           TrainingProgramRegistrationEntity,
+          UserFavoriteEntity,
+          SpecialityEntity,
+          SiteConfigEntity,
         ],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: configService.get('NODE_ENV') === 'development',

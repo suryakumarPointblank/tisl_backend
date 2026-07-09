@@ -23,6 +23,8 @@ import { ContactInquiryEntity } from '../domain/contact-inquiry/contact-inquiry.
 import { CaseSubmissionEntity } from '../domain/case-submission/case-submission.entity';
 import { SlideDeckRequestEntity } from '../domain/slide-deck-request/slide-deck-request.entity';
 import { WebinarInterestEntity } from '../domain/webinar-interest/webinar-interest.entity';
+import { SpecialityEntity } from '../domain/speciality/speciality.entity';
+import { SiteConfigEntity } from '../domain/site-config/site-config.entity';
 
 const AppDataSource = new DataSource({
   type: 'postgres',
@@ -52,6 +54,8 @@ const AppDataSource = new DataSource({
     TrainingProgramEntity,
     TrainingProgramBatchEntity,
     TrainingProgramRegistrationEntity,
+    SpecialityEntity,
+    SiteConfigEntity,
   ],
   synchronize: true,
 });
@@ -169,6 +173,42 @@ async function seed() {
     console.log('Training programs seeded successfully');
   } else {
     console.log('Training programs already exist, skipping');
+  }
+
+  // ── Specialities ──────────────────────────────────────────────────────────
+  const specialityRepo = AppDataSource.getRepository(SpecialityEntity);
+  const specialityCount = await specialityRepo.count();
+  if (specialityCount === 0) {
+    const specialities = [
+      { name: 'Interventional Cardiology', sortOrder: 1 },
+      { name: 'Interventional Radiology', sortOrder: 2 },
+      { name: 'Cardiovascular Surgery', sortOrder: 3 },
+      { name: 'Cardiac Anaesthesia', sortOrder: 4 },
+      { name: 'Clinical Cardiology', sortOrder: 5 },
+      { name: 'Vascular Surgery', sortOrder: 6 },
+      { name: 'Other', sortOrder: 99 },
+    ];
+    for (const s of specialities) {
+      await specialityRepo.save(specialityRepo.create({ ...s, isActive: true }));
+    }
+    console.log(`Seeded ${specialities.length} specialities`);
+  } else {
+    console.log('Specialities already exist, skipping');
+  }
+
+  // ── Site Config ────────────────────────────────────────────────────────────
+  const siteConfigRepo = AppDataSource.getRepository(SiteConfigEntity);
+  const defaults = [
+    { key: 'slide_deck_delivery_time', value: 'Within 1 working day', description: 'Delivery time shown on slide deck request page' },
+    { key: 'slide_deck_default_format', value: 'PDF', description: 'Default format label for slide presentations' },
+    { key: 'slide_deck_disclaimer', value: 'This slide deck is for educational purposes only and is intended for healthcare professionals. Not for patient distribution.', description: 'Disclaimer note shown on slide deck request page' },
+  ];
+  for (const cfg of defaults) {
+    const existing = await siteConfigRepo.findOne({ where: { key: cfg.key } });
+    if (!existing) {
+      await siteConfigRepo.save(siteConfigRepo.create(cfg));
+      console.log(`Seeded site config: ${cfg.key}`);
+    }
   }
 
   await AppDataSource.destroy();
