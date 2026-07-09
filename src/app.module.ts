@@ -20,6 +20,8 @@ import { WebinarInterestModule } from './domain/webinar-interest/webinar-interes
 import { TrainingProgramModule } from './domain/training-program/training-program.module';
 import { TrainingProgramRegistrationModule } from './domain/training-program-registration/training-program-registration.module';
 import { UserFavoriteModule } from './domain/user-favorite/user-favorite.module';
+import { SpecialityModule } from './domain/speciality/speciality.module';
+import { SiteConfigModule } from './domain/site-config/site-config.module';
 
 @Module({
   imports: [
@@ -44,6 +46,8 @@ import { UserFavoriteModule } from './domain/user-favorite/user-favorite.module'
     WebinarInterestModule,
     TrainingProgramModule,
     TrainingProgramRegistrationModule,
+    SpecialityModule,
+    SiteConfigModule,
   ],
 })
 export class AppModule {}
