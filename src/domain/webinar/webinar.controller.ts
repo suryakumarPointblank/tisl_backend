@@ -13,6 +13,13 @@ export class WebinarController {
     return this.webinarService.findUpcoming();
   }
 
+  @Get('upcoming/by-faculty/:facultyId')
+  @ApiOperation({ summary: 'Get upcoming webinars for a specific faculty member' })
+  @ApiParam({ name: 'facultyId' })
+  findUpcomingByFaculty(@Param('facultyId') facultyId: string) {
+    return this.webinarService.findUpcomingByFaculty(facultyId);
+  }
+
   @Get()
   @ApiOperation({ summary: 'Get webinars, optionally filtered by therapy area' })
   @ApiQuery({ name: 'therapyAreaId', required: false })

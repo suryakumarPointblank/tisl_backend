@@ -24,6 +24,19 @@ export class WebinarService {
     });
   }
 
+  async findUpcomingByFaculty(facultyId: string): Promise<WebinarEntity[]> {
+    this.logger.log('Fetching upcoming webinars by faculty', { facultyId });
+    return this.webinarRepository
+      .createQueryBuilder('w')
+      .innerJoin('w.faculty', 'fFilter', 'fFilter.id = :facultyId', { facultyId })
+      .leftJoinAndSelect('w.therapyArea', 'ta')
+      .leftJoinAndSelect('w.faculty', 'allFaculty')
+      .where('w.isActive = :isActive', { isActive: true })
+      .andWhere('w.scheduledAt > :now', { now: new Date() })
+      .orderBy('w.scheduledAt', 'ASC')
+      .getMany();
+  }
+
   async findByTherapyArea(therapyAreaId: string): Promise<WebinarEntity[]> {
     this.logger.log('Fetching webinars by therapy area', { therapyAreaId });
     return this.webinarRepository.find({
