@@ -1,5 +1,5 @@
-import { Controller, Post, Get, Body, UseGuards } from '@nestjs/common';
-import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
+import { Controller, Post, Get, Body, Param, UseGuards } from '@nestjs/common';
+import { ApiTags, ApiOperation, ApiBearerAuth, ApiParam } from '@nestjs/swagger';
 import { TrainingProgramRegistrationService } from './training-program-registration.service';
 import { CreateTrainingProgramRegistrationDto } from './dto/create-training-program-registration.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
@@ -27,6 +27,14 @@ export class TrainingProgramRegistrationController {
       registrationRef: registration.registrationRef,
       id: registration.id,
     };
+  }
+
+  @Post(':id/resend-confirmation')
+  @ApiOperation({ summary: 'Resend confirmation email for a registration (stub — mailer TBD)' })
+  @ApiParam({ name: 'id' })
+  async resendConfirmation(@Param('id') id: string) {
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    return { message: 'Confirmation email resent.' };
   }
 
   @Get('my')
