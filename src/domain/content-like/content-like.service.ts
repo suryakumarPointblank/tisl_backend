@@ -54,6 +54,28 @@ export class ContentLikeService {
 
   async getUserLikes(userId: string): Promise<ContentLikeEntity[]> {
     this.logger.log('Fetching user likes', { userId });
-    return this.contentLikeRepository.find({ where: { userId } });
+    return this.contentLikeRepository.find({
+      where: { userId },
+      relations: { contentItem: true },
+      order: { likedAt: 'DESC' },
+    });
+  }
+
+  async getContentLikeStats(): Promise<{ contentItemId: string; title: string; contentType: string; likeCount: number }[]> {
+    this.logger.log('Fetching content like stats');
+    const rows = await this.contentLikeRepository
+      .createQueryBuilder('cl')
+      .select('cl.contentItemId', 'contentItemId')
+      .addSelect('ci.title', 'title')
+      .addSelect('ci.contentType', 'contentType')
+      .addSelect('COUNT(cl.id)', 'likeCount')
+      .innerJoin('cl.contentItem', 'ci')
+      .where('cl.contentItemId IS NOT NULL')
+      .groupBy('cl.contentItemId')
+      .addGroupBy('ci.title')
+      .addGroupBy('ci.contentType')
+      .orderBy('COUNT(cl.id)', 'DESC')
+      .getRawMany();
+    return rows.map((r) => ({ ...r, likeCount: parseInt(r.likeCount, 10) }));
   }
 }

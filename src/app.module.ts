@@ -16,8 +16,10 @@ import { ContactInquiryModule } from './domain/contact-inquiry/contact-inquiry.m
 import { CaseSubmissionModule } from './domain/case-submission/case-submission.module';
 import { SlideDeckRequestModule } from './domain/slide-deck-request/slide-deck-request.module';
 import { WebinarRegistrationModule } from './domain/webinar-registration/webinar-registration.module';
+import { WebinarInterestModule } from './domain/webinar-interest/webinar-interest.module';
 import { TrainingProgramModule } from './domain/training-program/training-program.module';
 import { TrainingProgramRegistrationModule } from './domain/training-program-registration/training-program-registration.module';
+import { UserFavoriteModule } from './domain/user-favorite/user-favorite.module';
 
 @Module({
   imports: [
@@ -29,6 +31,7 @@ import { TrainingProgramRegistrationModule } from './domain/training-program-reg
     TopicModule,
     ContentItemModule,
     ContentLikeModule,
+    UserFavoriteModule,
     FacultyModule,
     ConditionModule,
     PatientContentModule,
@@ -38,6 +41,7 @@ import { TrainingProgramRegistrationModule } from './domain/training-program-reg
     CaseSubmissionModule,
     SlideDeckRequestModule,
     WebinarRegistrationModule,
+    WebinarInterestModule,
     TrainingProgramModule,
     TrainingProgramRegistrationModule,
   ],

@@ -5,10 +5,11 @@ import { ContentItemEntity } from '../content-item/content-item.entity';
 import { PatientContentEntity } from '../patient-content/patient-content.entity';
 import { ContentLikeService } from './content-like.service';
 import { ContentLikeController } from './content-like.controller';
+import { ContentLikeAdminController } from './content-like-admin.controller';
 
 @Module({
   imports: [TypeOrmModule.forFeature([ContentLikeEntity, ContentItemEntity, PatientContentEntity])],
-  controllers: [ContentLikeController],
+  controllers: [ContentLikeController, ContentLikeAdminController],
   providers: [ContentLikeService],
   exports: [ContentLikeService],
 })

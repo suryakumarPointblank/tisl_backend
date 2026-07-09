@@ -22,6 +22,7 @@ import { RefreshTokenEntity } from '../application/auth/refresh-token.entity';
 import { ContactInquiryEntity } from '../domain/contact-inquiry/contact-inquiry.entity';
 import { CaseSubmissionEntity } from '../domain/case-submission/case-submission.entity';
 import { SlideDeckRequestEntity } from '../domain/slide-deck-request/slide-deck-request.entity';
+import { WebinarInterestEntity } from '../domain/webinar-interest/webinar-interest.entity';
 
 const AppDataSource = new DataSource({
   type: 'postgres',
@@ -46,6 +47,7 @@ const AppDataSource = new DataSource({
     ContactInquiryEntity,
     CaseSubmissionEntity,
     SlideDeckRequestEntity,
+    WebinarInterestEntity,
     WebinarRegistrationEntity,
     TrainingProgramEntity,
     TrainingProgramBatchEntity,

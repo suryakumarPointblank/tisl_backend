@@ -2,6 +2,7 @@
 import { ApiTags, ApiOperation, ApiQuery, ApiParam, ApiBearerAuth } from '@nestjs/swagger';
 import { ContentItemService } from './content-item.service';
 import { OptionalJwtGuard } from '../../common/guards/optional-jwt.guard';
+import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 
 @ApiTags('Content Items')
@@ -18,6 +19,14 @@ export class ContentItemController {
     @Query('contentType') contentType?: string,
   ) {
     return this.contentItemService.findByTopic(topicId, { contentType });
+  }
+
+  @Get('history/my')
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth('JWT-auth')
+  @ApiOperation({ summary: 'Get viewing history for current user' })
+  getMyHistory(@GetUser() user: { id: string }) {
+    return this.contentItemService.getUserHistory(user.id);
   }
 
   @Get('by-faculty/:facultyId')

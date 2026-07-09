@@ -47,10 +47,15 @@ export class ContentItemService {
 
   async findById(id: string): Promise<ContentItemEntity> {
     this.logger.log('Fetching content item by id', { id });
-    const item = await this.contentItemRepository.findOne({
-      where: { id, isActive: true },
-      relations: { faculty: true, topic: true },
-    });
+    const item = await this.contentItemRepository
+      .createQueryBuilder('ci')
+      .leftJoinAndSelect('ci.faculty', 'faculty')
+      .leftJoinAndSelect('ci.topic', 'topic')
+      .leftJoinAndSelect('topic.subSection', 'subSection')
+      .leftJoinAndSelect('subSection.therapyArea', 'therapyArea')
+      .where('ci.id = :id', { id })
+      .andWhere('ci.isActive = true')
+      .getOne();
     if (!item) throw new NotFoundException(`Content item '${id}' not found`);
     return item;
   }
@@ -83,6 +88,22 @@ export class ContentItemService {
     if (!item) throw new NotFoundException(`Content item '${id}' not found`);
     await this.contentItemRepository.remove(item);
     return { message: 'Deleted successfully' };
+  }
+
+  async getUserHistory(userId: string) {
+    this.logger.log('Fetching user view history', { userId });
+    const views = await this.contentViewRepository.find({
+      where: { userId },
+      relations: { contentItem: { topic: { subSection: { therapyArea: true } } } },
+      order: { viewedAt: 'DESC' },
+      take: 50,
+    });
+    const seen = new Set<string>();
+    return views.filter((v) => {
+      if (!v.contentItemId || seen.has(v.contentItemId)) return false;
+      seen.add(v.contentItemId);
+      return true;
+    });
   }
 
   async recordView(
