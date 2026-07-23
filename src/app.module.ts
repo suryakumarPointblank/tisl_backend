@@ -22,6 +22,7 @@ import { TrainingProgramRegistrationModule } from './domain/training-program-reg
 import { UserFavoriteModule } from './domain/user-favorite/user-favorite.module';
 import { SpecialityModule } from './domain/speciality/speciality.module';
 import { SiteConfigModule } from './domain/site-config/site-config.module';
+import { UploadModule } from './domain/upload/upload.module';
 
 @Module({
   imports: [
@@ -48,6 +49,7 @@ import { SiteConfigModule } from './domain/site-config/site-config.module';
     TrainingProgramRegistrationModule,
     SpecialityModule,
     SiteConfigModule,
+    UploadModule,
   ],
 })
 export class AppModule {}
