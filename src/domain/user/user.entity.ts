@@ -13,7 +13,9 @@ export class UserEntity {
   @Column({ name: 'last_name', type: 'varchar', nullable: true }) lastName: string;
   @Column({ type: 'varchar', unique: true }) @Index() email: string;
   @Column({ type: 'varchar', unique: true }) @Index() mobile: string;
-  @Column({ name: 'password_hash', type: 'varchar' }) passwordHash: string;
+  @Column({ name: 'password_hash', type: 'varchar', nullable: true }) passwordHash: string | null;
+  @Column({ type: 'varchar', default: 'local' }) provider: string;
+  @Column({ name: 'google_id', type: 'varchar', nullable: true, unique: true }) googleId: string | null;
   @Column({ name: 'pin_code', type: 'varchar', nullable: true }) pinCode: string;
   @Column({ type: 'varchar', nullable: true }) city: string;
   @Column({ type: 'varchar', nullable: true }) state: string;

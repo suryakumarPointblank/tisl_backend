@@ -44,6 +44,7 @@
     "csv-parser": "^3.2.1",
     "date-fns": "^4.4.0",
     "exceljs": "^4.4.0",
+    "google-auth-library": "^9.15.1",
     "helmet": "^8.2.0",
     "multer": "^2.2.0",
     "nest-commander": "^3.20.1",

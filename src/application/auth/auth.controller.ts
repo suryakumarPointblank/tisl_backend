@@ -6,6 +6,8 @@ import { LoginDto } from './dto/login.dto';
 import { SendOtpDto } from './dto/send-otp.dto';
 import { LoginOtpDto } from './dto/login-otp.dto';
 import { RefreshTokenDto } from './dto/refresh-token.dto';
+import { GoogleAuthDto } from './dto/google-auth.dto';
+import { GoogleRegisterDto } from './dto/google-register.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 
@@ -50,6 +52,25 @@ export class AuthController {
   @ApiResponse({ status: 401, description: 'Invalid OTP or mobile not registered' })
   async loginOtp(@Body() dto: LoginOtpDto) {
     return this.authService.loginWithOtp(dto.mobile, dto.otp);
+  }
+
+  @Post('google')
+  @HttpCode(HttpStatus.OK)
+  @ApiOperation({ summary: 'Log in (or check) with a Google ID token' })
+  @ApiBody({ type: GoogleAuthDto })
+  @ApiResponse({ status: 200, description: 'Tokens returned, or isNewUser: true with prefill profile' })
+  @ApiResponse({ status: 401, description: 'Invalid Google token' })
+  async googleAuth(@Body() dto: GoogleAuthDto) {
+    return this.authService.googleAuth(dto.idToken);
+  }
+
+  @Post('google/register')
+  @ApiOperation({ summary: 'Complete registration for a new HCP user signing up with Google' })
+  @ApiBody({ type: GoogleRegisterDto })
+  @ApiResponse({ status: 201, description: 'User registered, tokens returned' })
+  @ApiResponse({ status: 409, description: 'Email or mobile already registered' })
+  async googleRegister(@Body() dto: GoogleRegisterDto) {
+    return this.authService.googleRegister(dto);
   }
 
   @Post('refresh')
