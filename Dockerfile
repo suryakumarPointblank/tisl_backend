@@ -7,8 +7,8 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies (use npm install if package-lock is not perfectly synced, but ci is better)
-RUN npm ci
+# Install dependencies
+RUN npm install
 
 # Copy the rest of your application code
 COPY . .
