@@ -41,6 +41,7 @@ export class WebinarRegistrationEntity {
   @Column({ name: 'consent_reminder', type: 'boolean', default: false }) consentReminder: boolean;
   @Column({ name: 'consent_recording', type: 'boolean', default: false }) consentRecording: boolean;
   @Column({ name: 'consent_terumo', type: 'boolean', default: false }) consentTerumo: boolean;
+  @Column({ name: 'consent_whatsapp', type: 'boolean', default: false }) consentWhatsapp: boolean;
   @Column({ type: 'varchar', default: 'REGISTERED' }) status: string;
 
   @CreateDateColumn({ name: 'created_at' }) createdAt: Date;

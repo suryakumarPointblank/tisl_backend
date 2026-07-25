@@ -14,7 +14,8 @@
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "seed": "ts-node -r tsconfig-paths/register src/database/seed.ts"
+    "seed": "ts-node -r tsconfig-paths/register src/database/seed.ts",
+    "migrate:content-types": "ts-node -r tsconfig-paths/register src/database/migrate-content-types.ts"
   },
   "dependencies": {
     "@azure/communication-email": "^1.1.0",

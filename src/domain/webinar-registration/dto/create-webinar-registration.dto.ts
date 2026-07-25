@@ -20,4 +20,5 @@ export class CreateWebinarRegistrationDto {
   @ApiPropertyOptional() @IsBoolean() @IsOptional() consentReminder: boolean;
   @ApiPropertyOptional() @IsBoolean() @IsOptional() consentRecording: boolean;
   @ApiPropertyOptional() @IsBoolean() @IsOptional() consentTerumo: boolean;
+  @ApiPropertyOptional() @IsBoolean() @IsOptional() consentWhatsapp: boolean;
 }

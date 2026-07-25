@@ -1,11 +1,9 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import {
-  IsEmail,
   IsString,
   IsNotEmpty,
   IsOptional,
   IsBoolean,
-  IsInt,
 } from 'class-validator';
 
 export class GoogleRegisterDto {
@@ -21,29 +19,29 @@ export class GoogleRegisterDto {
   @IsString() @IsOptional()
   pinCode: string;
 
-  @ApiPropertyOptional({ example: 'AIIMS Delhi' })
-  @IsString() @IsOptional()
+  @ApiProperty({ example: 'Mumbai' })
+  @IsString() @IsNotEmpty()
+  city: string;
+
+  @ApiProperty({ example: 'Maharashtra' })
+  @IsString() @IsNotEmpty()
+  state: string;
+
+  @ApiProperty({ example: 'AIIMS Delhi' })
+  @IsString() @IsNotEmpty()
   hospital: string;
 
-  @ApiProperty({ example: 'Interventional Cardiologist' })
-  @IsString() @IsNotEmpty()
+  @ApiPropertyOptional({ example: 'Interventional Cardiologist' })
+  @IsString() @IsOptional()
   profession: string;
 
   @ApiProperty({ example: 'Interventional Cardiology' })
   @IsString() @IsNotEmpty()
   speciality: string;
 
-  @ApiPropertyOptional({ example: '2015-01-01' })
+  @ApiPropertyOptional({ example: 'MH12345' })
   @IsString() @IsOptional()
-  practicingSince: string;
-
-  @ApiProperty({ example: 'MH12345' })
-  @IsString() @IsNotEmpty()
   medicalRegNo: string;
-
-  @ApiPropertyOptional({ example: 2015 })
-  @IsInt() @IsOptional()
-  medicalRegYear: number;
 
   @ApiPropertyOptional({ example: false })
   @IsBoolean() @IsOptional()
