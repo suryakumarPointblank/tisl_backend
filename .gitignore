@@ -16,3 +16,8 @@ swagger-boot*.log
 
 google-cloud-key.json
 client_secret_*.json
+
+ssh_deploy*.js
+deploy.py
+debug_docker.py
+
