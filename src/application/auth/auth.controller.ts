@@ -1,4 +1,4 @@
-import { Controller, Post, Get, Body, UseGuards, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Get, Patch, Body, UseGuards, HttpCode, HttpStatus } from '@nestjs/common';
 import { ApiTags, ApiBearerAuth, ApiOperation, ApiResponse, ApiBody } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
 import { RegisterDto } from './dto/register.dto';
@@ -8,6 +8,7 @@ import { LoginOtpDto } from './dto/login-otp.dto';
 import { RefreshTokenDto } from './dto/refresh-token.dto';
 import { GoogleAuthDto } from './dto/google-auth.dto';
 import { GoogleRegisterDto } from './dto/google-register.dto';
+import { UpdateMyProfileDto } from './dto/update-my-profile.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 
@@ -90,5 +91,15 @@ export class AuthController {
   @ApiResponse({ status: 200, description: 'Current user data' })
   async getMe(@GetUser() user: { id: string }) {
     return this.authService.getMe(user.id);
+  }
+
+  @Patch('me')
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth('JWT-auth')
+  @ApiOperation({ summary: "Update current authenticated user's profile" })
+  @ApiBody({ type: UpdateMyProfileDto })
+  @ApiResponse({ status: 200, description: 'Updated user data' })
+  async updateMe(@GetUser() user: { id: string }, @Body() dto: UpdateMyProfileDto) {
+    return this.authService.updateMyProfile(user.id, dto);
   }
 }

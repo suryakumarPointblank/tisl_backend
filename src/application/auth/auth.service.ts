@@ -11,6 +11,7 @@ import { Logger } from '../../common/utils/logger';
 import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { GoogleRegisterDto } from './dto/google-register.dto';
+import { UpdateMyProfileDto } from './dto/update-my-profile.dto';
 
 @Injectable()
 export class AuthService {
@@ -194,6 +195,16 @@ export class AuthService {
     this.logger.log('Fetching current user', { userId });
     const user = await this.userRepository.findOne({ where: { id: userId } });
     if (!user) throw new UnauthorizedException('User not found');
+    const { passwordHash, ...result } = user;
+    return result;
+  }
+
+  async updateMyProfile(userId: string, dto: UpdateMyProfileDto) {
+    this.logger.log('Updating current user profile', { userId });
+    const user = await this.userRepository.findOne({ where: { id: userId } });
+    if (!user) throw new UnauthorizedException('User not found');
+    Object.assign(user, dto);
+    await this.userRepository.save(user);
     const { passwordHash, ...result } = user;
     return result;
   }

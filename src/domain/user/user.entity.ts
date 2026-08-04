@@ -20,6 +20,7 @@ export class UserEntity {
   @Column({ type: 'varchar', nullable: true }) city: string;
   @Column({ type: 'varchar', nullable: true }) state: string;
   @Column({ type: 'varchar', nullable: true }) hospital: string;
+  @Column({ type: 'varchar', nullable: true }) designation: string;
   @Column({ type: 'varchar', nullable: true }) profession: string;
   @Column({ type: 'varchar', nullable: true }) speciality: string;
   @Column({ name: 'practicing_since', type: 'date', nullable: true }) practicingSince: string;
