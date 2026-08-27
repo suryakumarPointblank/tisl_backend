@@ -1,0 +1,380 @@
+[
+  {
+    "excel_row": 36,
+    "sheet": "Videos",
+    "title": "Cardiopulmonary Bypass setup",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 37,
+    "sheet": "Videos",
+    "title": "Understanding the Heart Lung Machine",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 47,
+    "sheet": "Videos",
+    "title": "CDI System 550",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 48,
+    "sheet": "Videos",
+    "title": "TR Band RAH",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 56,
+    "sheet": "Videos",
+    "title": "Standard Cannulation for CPBP",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 57,
+    "sheet": "Videos",
+    "title": "Thoraflex",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 9,
+    "sheet": "Webinars",
+    "title": "GDB Strategy during CPB importance of continuous monitoring",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 67,
+    "sheet": "Webinars",
+    "title": "Blood Conservation techniques:  Blood Conservation Techniques during CPB",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 184,
+    "sheet": "Webinars",
+    "title": "Complex Case Conclave: Cardiac Resynchronisation Therapy Beginners Attempt",
+    "status": "Skipped",
+    "notes": "Marked remove in sheet"
+  },
+  {
+    "excel_row": 450,
+    "sheet": "Webinars",
+    "title": "Perfusion Expert Meet- Blood Conservation: Capillary Leak Syndrome and the systemic inflammatory response",
+    "status": "Skipped",
+    "notes": "Marked remove in sheet"
+  },
+  {
+    "excel_row": 451,
+    "sheet": "Webinars",
+    "title": "Perfusion Expert Meet- Blood Conservation: CPB Management in COVID-19 patients",
+    "status": "Skipped",
+    "notes": "Marked remove in sheet"
+  },
+  {
+    "excel_row": 19,
+    "sheet": "Presentations",
+    "title": "Emerging Role of Perfusionist in ECMO, VAD and Heart Transplant",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 20,
+    "sheet": "Presentations",
+    "title": "Effect of CPB on Lungs",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 21,
+    "sheet": "Presentations",
+    "title": "Intra Aortic Balloon Pump Counterpulsation Therapy",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 22,
+    "sheet": "Presentations",
+    "title": "Conduct of Cardiopulmonary Bypass",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 23,
+    "sheet": "Presentations",
+    "title": "Updates in Pediatric Perfusion",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 24,
+    "sheet": "Presentations",
+    "title": "Ultrafiltration & related Facts",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 25,
+    "sheet": "Presentations",
+    "title": "Fundamentals of Pediatric Perfusion",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 26,
+    "sheet": "Presentations",
+    "title": "Managing Critical Situations in Perfusion",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 27,
+    "sheet": "Presentations",
+    "title": "Pediatric Pharmacology",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 28,
+    "sheet": "Presentations",
+    "title": "Fluid Dynamics in Paediatrics",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 29,
+    "sheet": "Presentations",
+    "title": "Blood Conservation Strategies in Neonates and Pediatrics",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 30,
+    "sheet": "Presentations",
+    "title": "Aortic and Venous Cannulation Techniques",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 31,
+    "sheet": "Presentations",
+    "title": "Surgical Approach",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 32,
+    "sheet": "Presentations",
+    "title": "Pharmacological Approach during CPB",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 33,
+    "sheet": "Presentations",
+    "title": "Ventricular Assist Device (VAD)",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 34,
+    "sheet": "Presentations",
+    "title": "Deep Hypothermic Circulatory Arrest (DHCA)",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 35,
+    "sheet": "Presentations",
+    "title": "Foetal Circulation and Cardiac Anomalies",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 36,
+    "sheet": "Presentations",
+    "title": "Soft skills – Team collaboration",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 37,
+    "sheet": "Presentations",
+    "title": "Intra aortic balloon pump (IABP)",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 38,
+    "sheet": "Presentations",
+    "title": "Cannulation Techniques",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 39,
+    "sheet": "Presentations",
+    "title": "Anatomical Considerations for Cardiac surgeries",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 40,
+    "sheet": "Presentations",
+    "title": "Fluid Dynamics Part- 1",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 41,
+    "sheet": "Presentations",
+    "title": "Fluid Dynamics Part- 2",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 42,
+    "sheet": "Presentations",
+    "title": "Monitoring for Perfusion during Cardiopulmonary Bypass: An Evidence-based approach",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 43,
+    "sheet": "Presentations",
+    "title": "Perfusion Cannulae",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 59,
+    "sheet": "Presentations",
+    "title": "How Ultrafiltration And MUF On Cardiopulmonary Bypass Really Work!",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 61,
+    "sheet": "Presentations",
+    "title": "Normal Physiology",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 64,
+    "sheet": "Presentations",
+    "title": "Blood Parameters monitored on CPB",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 67,
+    "sheet": "Presentations",
+    "title": "Cardiothoracic Anatomy and Physiology",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 70,
+    "sheet": "Presentations",
+    "title": "CDI® Blood Parameter Monitoring System 550",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 73,
+    "sheet": "Presentations",
+    "title": "What is perfusion",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 74,
+    "sheet": "Presentations",
+    "title": "Physiology of Oxygen Transport & Consumption",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 75,
+    "sheet": "Presentations",
+    "title": "Perfusion Safety and Techniques 1",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 76,
+    "sheet": "Presentations",
+    "title": "Myocardial Protection 2",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 77,
+    "sheet": "Presentations",
+    "title": "Conduction & EKG's",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 78,
+    "sheet": "Presentations",
+    "title": "Overview of Human Heart Anatomy",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 81,
+    "sheet": "Presentations",
+    "title": "Augmented Venous Drainage",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 82,
+    "sheet": "Presentations",
+    "title": "Myocardial Protection 1",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 83,
+    "sheet": "Presentations",
+    "title": "Perfusion history",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 89,
+    "sheet": "Presentations",
+    "title": "What are the phases of surgery",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 99,
+    "sheet": "Presentations",
+    "title": "Interpretation & Management of blood gases on CPB",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 7,
+    "sheet": "Publications",
+    "title": "Automated Left Ventricular Wall Segmentation in Myocardial Perfusion Scintigraphy Using Artificial Intelligence",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 31,
+    "sheet": "Publications",
+    "title": "LVAD and Cryoballoon for ventricular tachycardia: Case Study",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  }
+]

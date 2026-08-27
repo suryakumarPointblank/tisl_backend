@@ -1,0 +1,436 @@
+[
+  {
+    "excel_row": 21,
+    "sheet": "Videos",
+    "title": "Aorto-Iliac Disease- Part II",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL]"
+  },
+  {
+    "excel_row": 22,
+    "sheet": "Videos",
+    "title": "Aorto-Iliac Disease- Part I",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL]"
+  },
+  {
+    "excel_row": 23,
+    "sheet": "Videos",
+    "title": "Carotid Intervention",
+    "status": "Skipped",
+    "notes": "Marked \"remove\" in Faculty Name column"
+  },
+  {
+    "excel_row": 24,
+    "sheet": "Videos",
+    "title": "Intracranial Interventions",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL. Also product branding]"
+  },
+  {
+    "excel_row": 25,
+    "sheet": "Videos",
+    "title": "Coils, FD's & Intracranial Devices",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL. Also product branding]"
+  },
+  {
+    "excel_row": 26,
+    "sheet": "Videos",
+    "title": "Microcatheters- the fundamentals",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL. Also product branding]"
+  },
+  {
+    "excel_row": 27,
+    "sheet": "Videos",
+    "title": "Coils & Plugs",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL. Also product branding]"
+  },
+  {
+    "excel_row": 28,
+    "sheet": "Videos",
+    "title": "Understanding Guide Wires",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL]"
+  },
+  {
+    "excel_row": 29,
+    "sheet": "Videos",
+    "title": "History of Interventional Radiology",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: it's not the history but more general awareness about IR. Retain as general awareness.]"
+  },
+  {
+    "excel_row": 30,
+    "sheet": "Videos",
+    "title": "Tips for a Successful Radial Access for Visceral Intervention (RAVI)",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain]"
+  },
+  {
+    "excel_row": 31,
+    "sheet": "Videos",
+    "title": "Prostate Artery Embolization Case Video with Sandeep Bagla, M.D.",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: should we retain content >5 years old]"
+  },
+  {
+    "excel_row": 32,
+    "sheet": "Videos",
+    "title": "Going Further with PAE - Learn from the Experts: Complex Case Reviews and Discussion",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain. Clarity on TLE brand]"
+  },
+  {
+    "excel_row": 33,
+    "sheet": "Videos",
+    "title": "Interventional Radiology Series Part 3: Skills (Wire, Flushing, Back Table)",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL. ALSO if it’s a 3 part series- should have all parts]"
+  },
+  {
+    "excel_row": 34,
+    "sheet": "Videos",
+    "title": "Interventional Radiology Series Part 2: Needles, Catheters, Wires, Sheaths",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: retain but check if we have rights to host 3rd party content on TISL]"
+  },
+  {
+    "excel_row": 35,
+    "sheet": "Videos",
+    "title": "What is Perfusion?",
+    "status": "Skipped",
+    "notes": "Faculty Name note: \"not relevant to IR- IC Topic\" (mistagged, belongs elsewhere)"
+  },
+  {
+    "excel_row": 73,
+    "sheet": "Videos",
+    "title": "Access and Equipment Options for PAE Clinical Case Reviews",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 74,
+    "sheet": "Videos",
+    "title": "Considerations for Performing Radial Prostate Artery Embolization (PAE)",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 75,
+    "sheet": "Videos",
+    "title": "Importance of Patient Selection when Choosing an Access Site",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 77,
+    "sheet": "Videos",
+    "title": "Case Review of Difficult Embolization PAE for BPH",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 78,
+    "sheet": "Videos",
+    "title": "Learnings from Difficult PAE Cases",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 79,
+    "sheet": "Videos",
+    "title": "HHT & AVM Embolization Using Radial Approach",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 80,
+    "sheet": "Videos",
+    "title": "Transsplenic Access & Portal Vein Interventions",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 81,
+    "sheet": "Videos",
+    "title": "Pelvic Congestion Syndrome - Ovarian Vein Embolization",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 82,
+    "sheet": "Videos",
+    "title": "Embolization Strategies for UAE",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 83,
+    "sheet": "Videos",
+    "title": "Internal Iliac Embolization Tips",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 84,
+    "sheet": "Videos",
+    "title": "Tools for Transcaval Access for Type II Endoleak",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 96,
+    "sheet": "Videos",
+    "title": "Radial Access for Visceral Intervention: Tips & Tricks for Access",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 97,
+    "sheet": "Videos",
+    "title": "Radial Access for Visceral Intervention: Choice of Equipment",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 98,
+    "sheet": "Videos",
+    "title": "Radial Access for Visceral Intervention: Embolization",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 99,
+    "sheet": "Videos",
+    "title": "Radial Access for Visceral Intervention: Complex Cases",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 100,
+    "sheet": "Videos",
+    "title": "Radial Access for Visceral Intervention: TIPS",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 101,
+    "sheet": "Videos",
+    "title": "Q&A with Dr. Fadi Saab - The Impact of NAVICROSS 0.018 on Treatment Algorithms for Critical Limb Ischemia",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 102,
+    "sheet": "Videos",
+    "title": "Treating Complex Lesions with Dr. Mazin Foteh",
+    "status": "Skipped",
+    "notes": "Marked \"not able to open\" (broken source link)"
+  },
+  {
+    "excel_row": 113,
+    "sheet": "Videos",
+    "title": "Pushing Boundaries: LIMA Intervention via Right Radial Artery (duplicate)",
+    "status": "Skipped",
+    "notes": "Marked \"not able to open\" + explicit duplicate"
+  },
+  {
+    "excel_row": 16,
+    "sheet": "Others",
+    "title": "Interventional procedures in management of Acute DVT",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Retain but check the credentials of KOL]"
+  },
+  {
+    "excel_row": 17,
+    "sheet": "Others",
+    "title": "A deep dive into Dialysis fistulas",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Retain but check the credentials of KOL]"
+  },
+  {
+    "excel_row": 18,
+    "sheet": "Others",
+    "title": "Genicular artery Embolization",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Retain but check the credentials of KOL]"
+  },
+  {
+    "excel_row": 19,
+    "sheet": "Others",
+    "title": "Hepatocellular Carcinoma An IR prospective",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Retain but check the credentials of KOL]"
+  },
+  {
+    "excel_row": 20,
+    "sheet": "Others",
+    "title": "Cath-lab nightmares My experience & way through in Pancreatitis related GI Bleed",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Retain but check the credentials of KOL]"
+  },
+  {
+    "excel_row": 21,
+    "sheet": "Others",
+    "title": "Role of IR in management of thyroid Nodules",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Retain but check the credentials of KOL]"
+  },
+  {
+    "excel_row": 22,
+    "sheet": "Others",
+    "title": "Difficult venous access - Tips & tricks of management",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Retain but check the credentials of KOL]"
+  },
+  {
+    "excel_row": 29,
+    "sheet": "Others",
+    "title": "BTACE vs cTACE",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Modify]"
+  },
+  {
+    "excel_row": 33,
+    "sheet": "Others",
+    "title": "Terumo India LinkedIn Carousel (PDF)",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered). [caveat: Modify]"
+  },
+  {
+    "excel_row": 6,
+    "sheet": "Webinars",
+    "title": "Learn from Masters: Balloon Occluded TACE for HCC Management",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 73,
+    "sheet": "Webinars",
+    "title": "Complex Coronary Conclave: PCI in lesion with high calcium content (LHCC)",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 5,
+    "sheet": "Publications",
+    "title": "Real-World Outcomes of Irinotecan-TACE for Colorectal Liver Metastases",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 6,
+    "sheet": "Publications",
+    "title": "Imaging-Based Prediction of Complete Response in HCC Using Sultan's Score",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 9,
+    "sheet": "Publications",
+    "title": "Drug-Eluting Beads or Conventional TACE in HCC: A Meta-Analysis of Real-World Studies",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 12,
+    "sheet": "Publications",
+    "title": "Distal Radial Access for Neuro-Interventional Procedures",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 13,
+    "sheet": "Publications",
+    "title": "Comparison of Drug-Coated Balloons vs. DES for In-Stent Restenosis",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 17,
+    "sheet": "Publications",
+    "title": "Ultrasound-Guided vs. Conventional Radial Access in Interventional Radiology",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 21,
+    "sheet": "Publications",
+    "title": "Transradial Approach for Renal Artery Stenting",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 22,
+    "sheet": "Publications",
+    "title": "PAE Outcomes Using Microspheres: Single-Center Experience",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 23,
+    "sheet": "Publications",
+    "title": "TACE for Hepatocellular Carcinoma: Updated Evidence",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 28,
+    "sheet": "Publications",
+    "title": "Modified Radial Artery Access Technique for Interventional Radiology",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 29,
+    "sheet": "Publications",
+    "title": "Initial evaluation of the anatomical distance from the radial artery to the target lesion in the lower limb",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 33,
+    "sheet": "Publications",
+    "title": "Improved Arterial Access via Smart Tech",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 38,
+    "sheet": "Publications",
+    "title": "Catheter-Directed Thrombolysis for Acute Limb Ischemia",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 39,
+    "sheet": "Publications",
+    "title": "Outcomes of PAE for Prostate Hyperplasia: 2-Year Follow-up",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 43,
+    "sheet": "Publications",
+    "title": "Ultrasound-Guided Distal Radial Access: Safety and Success Rates",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 44,
+    "sheet": "Publications",
+    "title": "Drug-Coated Balloon for Below-the-Knee Lesions",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  },
+  {
+    "excel_row": 49,
+    "sheet": "Publications",
+    "title": "Radial Access for Carotid Artery Stenting",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered)."
+  }
+]

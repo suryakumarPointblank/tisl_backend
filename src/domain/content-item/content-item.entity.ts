@@ -53,6 +53,8 @@ export class ContentItemEntity {
   @Column({ name: 'content_data', type: 'jsonb', nullable: true }) contentData: Record<string, unknown> | null;
   @Column({ name: 'published_at', type: 'timestamp with time zone', nullable: true }) publishedAt: Date | null;
   @Column({ name: 'is_active', type: 'boolean', default: true }) isActive: boolean;
+  @Column({ name: 'is_reviewed', type: 'boolean', default: false }) isReviewed: boolean;
+  @Column({ name: 'remarks', type: 'text', nullable: true }) remarks: string | null;
   @CreateDateColumn({ name: 'created_at' }) createdAt: Date;
   @UpdateDateColumn({ name: 'updated_at' }) updatedAt: Date;
 }

@@ -1,0 +1,58 @@
+[
+  {
+    "excel_row": 46,
+    "sheet": "Videos",
+    "title": "Setting Up A Pump (Terumo Sarns)",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 58,
+    "sheet": "Videos",
+    "title": "Anaconda",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 59,
+    "sheet": "Videos",
+    "title": "Relay Plus",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 60,
+    "sheet": "Videos",
+    "title": "Ultimaster",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 85,
+    "sheet": "Videos",
+    "title": "Transradial to Peripheral Interventions",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 66,
+    "sheet": "Presentations",
+    "title": "Aortic Arch Disease: From Disease to Procedure",
+    "status": "Migrated",
+    "notes": "No source URL in sheet (presentation slide deck) — created without fileUrl."
+  },
+  {
+    "excel_row": 35,
+    "sheet": "Publications",
+    "title": "Mastering Hybrid Aortic Arch Replacements",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  },
+  {
+    "excel_row": 36,
+    "sheet": "Publications",
+    "title": "Radial access for EVAR",
+    "status": "Migrated",
+    "notes": "Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV)."
+  }
+]

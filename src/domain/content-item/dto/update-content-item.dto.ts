@@ -13,4 +13,6 @@ export class UpdateContentItemDto {
   @ApiPropertyOptional() @IsObject() @IsOptional() contentData?: Record<string, unknown>;
   @ApiPropertyOptional() @IsDateString() @IsOptional() publishedAt?: string;
   @ApiPropertyOptional() @IsBoolean() @IsOptional() isActive?: boolean;
+  @ApiPropertyOptional() @IsBoolean() @IsOptional() isReviewed?: boolean;
+  @ApiPropertyOptional() @IsString() @IsOptional() remarks?: string;
 }
