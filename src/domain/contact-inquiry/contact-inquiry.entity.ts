@@ -16,6 +16,9 @@ export class ContactInquiryEntity {
   @Column({ type: 'varchar' })
   email: string;
 
+  @Column({ type: 'varchar', nullable: true })
+  mobile: string | null;
+
   @Column({ type: 'text' })
   message: string;
 

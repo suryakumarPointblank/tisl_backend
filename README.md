@@ -23,6 +23,10 @@ $ npm run start:dev
 npm run start:prod
 ```
 
+## TODO
+
+- Contact Inquiries (`src/domain/contact-inquiry`): by default, every new "Request More Info" submission should send an email notification to **medinfo_india@terumo.co.jp**. Not yet wired up — no SMTP/Azure Communication Email credentials are configured. `nodemailer` and `@azure/communication-email` are already in `package.json`; add the credentials to `.env` and implement the send in `ContactInquiryService.create()` (see TODO comment there).
+
 ## Test
 
 ```bash

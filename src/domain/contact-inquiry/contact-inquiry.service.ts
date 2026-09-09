@@ -21,6 +21,9 @@ export class ContactInquiryService {
   async create(dto: CreateContactInquiryDto, userId?: string): Promise<ContactInquiryEntity> {
     this.logger.log('Creating contact inquiry', { email: dto.email, source: dto.source });
     const inquiry = this.repo.create({ ...dto, userId: userId ?? null });
-    return this.repo.save(inquiry);
+    const saved = await this.repo.save(inquiry);
+    // TODO: send an email notification for this inquiry to medinfo_india@terumo.co.jp
+    // once SMTP/Azure Communication Email credentials are available (see README).
+    return saved;
   }
 }
