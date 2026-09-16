@@ -23,6 +23,7 @@ import { UserFavoriteModule } from './domain/user-favorite/user-favorite.module'
 import { SpecialityModule } from './domain/speciality/speciality.module';
 import { SiteConfigModule } from './domain/site-config/site-config.module';
 import { UploadModule } from './domain/upload/upload.module';
+import { SearchModule } from './domain/search/search.module';
 
 @Module({
   imports: [
@@ -50,6 +51,7 @@ import { UploadModule } from './domain/upload/upload.module';
     SpecialityModule,
     SiteConfigModule,
     UploadModule,
+    SearchModule,
   ],
 })
 export class AppModule {}
