@@ -8,7 +8,10 @@ export class SearchController {
   constructor(private readonly searchService: SearchService) {}
 
   @Get()
-  @ApiOperation({ summary: 'Search therapy areas, sub-sections, topics, and content items' })
+  @ApiOperation({
+    summary:
+      'Search therapy areas, sub-sections, topics, content items, training programs, webinars, faculty, conditions, and patient content',
+  })
   @ApiQuery({ name: 'q', required: true, description: 'Search query' })
   async search(@Query('q') q: string) {
     return this.searchService.search(q ?? '');
