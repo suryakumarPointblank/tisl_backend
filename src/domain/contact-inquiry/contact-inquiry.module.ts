@@ -4,9 +4,10 @@ import { ContactInquiryEntity } from './contact-inquiry.entity';
 import { ContactInquiryService } from './contact-inquiry.service';
 import { ContactInquiryController } from './contact-inquiry.controller';
 import { ContactInquiryAdminController } from './contact-inquiry-admin.controller';
+import { MailModule } from '../../infrastructure/mail/mail.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([ContactInquiryEntity])],
+  imports: [TypeOrmModule.forFeature([ContactInquiryEntity]), MailModule],
   controllers: [ContactInquiryController, ContactInquiryAdminController],
   providers: [ContactInquiryService],
   exports: [ContactInquiryService],

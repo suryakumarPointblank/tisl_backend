@@ -30,10 +30,10 @@ export class TrainingProgramRegistrationController {
   }
 
   @Post(':id/resend-confirmation')
-  @ApiOperation({ summary: 'Resend confirmation email for a registration (stub — mailer TBD)' })
+  @ApiOperation({ summary: 'Resend confirmation email for a registration' })
   @ApiParam({ name: 'id' })
   async resendConfirmation(@Param('id') id: string) {
-    await new Promise((resolve) => setTimeout(resolve, 800));
+    await this.trainingProgramRegistrationService.sendConfirmationEmail(id);
     return { message: 'Confirmation email resent.' };
   }
 

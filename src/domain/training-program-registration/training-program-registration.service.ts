@@ -5,6 +5,7 @@ import { TrainingProgramRegistrationEntity } from './training-program-registrati
 import { TrainingProgramBatchEntity } from '../training-program/training-program-batch.entity';
 import { CreateTrainingProgramRegistrationDto } from './dto/create-training-program-registration.dto';
 import { Logger } from '../../common/utils/logger';
+import { MailService } from '../../infrastructure/mail/mail.service';
 
 @Injectable()
 export class TrainingProgramRegistrationService {
@@ -15,6 +16,7 @@ export class TrainingProgramRegistrationService {
     private readonly registrationRepository: Repository<TrainingProgramRegistrationEntity>,
     @InjectRepository(TrainingProgramBatchEntity)
     private readonly batchRepository: Repository<TrainingProgramBatchEntity>,
+    private readonly mailService: MailService,
   ) {}
 
   findAllAdmin(): Promise<TrainingProgramRegistrationEntity[]> {
@@ -63,6 +65,12 @@ export class TrainingProgramRegistrationService {
       await this.batchRepository.save(batch);
     }
 
+    try {
+      await this.sendConfirmationEmail(saved.id);
+    } catch {
+      // Registration already succeeded; email failure is logged in sendConfirmationEmail.
+    }
+
     return saved;
   }
 
@@ -73,5 +81,36 @@ export class TrainingProgramRegistrationService {
       relations: { program: true, batch: true },
       order: { createdAt: 'DESC' },
     });
+  }
+
+  async sendConfirmationEmail(id: string): Promise<void> {
+    const registration = await this.registrationRepository.findOne({
+      where: { id },
+      relations: { program: true, batch: true },
+    });
+    if (!registration) throw new NotFoundException('Registration not found');
+
+    try {
+      await this.mailService.sendMail({
+        to: registration.email,
+        subject: `Registration Confirmation - ${registration.program?.title ?? 'Training Program'}`,
+        text: [
+          `Dear ${registration.firstName} ${registration.lastName},`,
+          '',
+          `Your registration (${registration.registrationRef}) for ${registration.program?.title ?? 'the training program'} has been received.`,
+          registration.batch
+            ? `Batch dates: ${registration.batch.startDate} to ${registration.batch.endDate}${registration.batch.venue ? ` at ${registration.batch.venue}` : ''}`
+            : '',
+          `Status: ${registration.status}`,
+        ]
+          .filter(Boolean)
+          .join('\n'),
+      });
+    } catch (error) {
+      this.logger.error('Failed to send registration confirmation email', error?.stack, {
+        registrationId: registration.id,
+      });
+      throw error;
+    }
   }
 }
