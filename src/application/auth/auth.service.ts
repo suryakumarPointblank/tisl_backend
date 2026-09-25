@@ -4,6 +4,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, MoreThan } from 'typeorm';
 import { ConfigService } from '@nestjs/config';
 import { OAuth2Client } from 'google-auth-library';
+import { createHash } from 'crypto';
 import { UserEntity, UserStatus } from '../../domain/user/user.entity';
 import { RefreshTokenEntity } from './refresh-token.entity';
 import { PasswordUtil } from '../../common/utils/password.util';
@@ -174,12 +175,14 @@ export class AuthService {
     }
 
     const storedToken = await this.refreshTokenRepository.findOne({
-      where: { userId: payload.sub, isRevoked: false, expiresAt: MoreThan(new Date()) },
+      where: {
+        userId: payload.sub,
+        tokenHash: this.hashRefreshToken(refreshTokenValue),
+        isRevoked: false,
+        expiresAt: MoreThan(new Date()),
+      },
     });
     if (!storedToken) throw new UnauthorizedException('Refresh token expired or revoked');
-
-    const isValid = await this.passwordUtil.compare(refreshTokenValue, storedToken.tokenHash);
-    if (!isValid) throw new UnauthorizedException('Invalid refresh token');
 
     storedToken.isRevoked = true;
     await this.refreshTokenRepository.save(storedToken);
@@ -189,6 +192,29 @@ export class AuthService {
 
     this.logger.log('Tokens refreshed', { userId: user.id });
     return this.generateTokens(user);
+  }
+
+  async logout(refreshTokenValue: string) {
+    let payload: { sub: string };
+    try {
+      payload = this.jwtService.verify(refreshTokenValue, {
+        secret: this.configService.get('JWT_REFRESH_SECRET'),
+      });
+    } catch {
+      // Token already invalid/expired — nothing to revoke, but logout should
+      // still succeed since the client is clearing its own state regardless.
+      return { message: 'Logged out' };
+    }
+
+    const storedToken = await this.refreshTokenRepository.findOne({
+      where: { userId: payload.sub, tokenHash: this.hashRefreshToken(refreshTokenValue), isRevoked: false },
+    });
+    if (storedToken) {
+      storedToken.isRevoked = true;
+      await this.refreshTokenRepository.save(storedToken);
+    }
+    this.logger.log('User logged out', { userId: payload.sub });
+    return { message: 'Logged out' };
   }
 
   async getMe(userId: string) {
@@ -209,6 +235,18 @@ export class AuthService {
     return result;
   }
 
+  // Refresh tokens are long, already-random JWTs (not low-entropy secrets
+  // like passwords), so a fast deterministic digest is the right tool for
+  // exact-match storage/lookup here — bcrypt (used for real passwords
+  // elsewhere in this file) silently truncates its input at 72 bytes, and
+  // since these JWTs share a long common prefix across repeated logins for
+  // the same user (identical sub/email/role, differing iat/exp near the
+  // end), bcrypt.compare was returning false-positive matches across
+  // different tokens for the same user, breaking exact revocation.
+  private hashRefreshToken(value: string): string {
+    return createHash('sha256').update(value).digest('hex');
+  }
+
   private async generateTokens(user: UserEntity) {
     const payload = { sub: user.id, email: user.email, role: user.role };
     const accessToken = this.jwtService.sign(payload);
@@ -216,7 +254,7 @@ export class AuthService {
       secret: this.configService.get('JWT_REFRESH_SECRET'),
       expiresIn: this.configService.get('JWT_REFRESH_EXPIRES_IN', '30d'),
     });
-    const tokenHash = await this.passwordUtil.hash(refreshTokenValue);
+    const tokenHash = this.hashRefreshToken(refreshTokenValue);
     const expiresAt = new Date();
     expiresAt.setDate(expiresAt.getDate() + 30);
     await this.refreshTokenRepository.save(
