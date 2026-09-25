@@ -32,6 +32,11 @@ export class UserEntity {
   @Column({ name: 'mobile_verified', type: 'boolean', default: false }) mobileVerified: boolean;
   @Column({ name: 'consent_marketing', type: 'boolean', default: false }) consentMarketing: boolean;
   @Column({ name: 'consent_terumo', type: 'boolean', default: false }) consentTerumo: boolean;
+  // Set on logout; access tokens (stateless JWTs, otherwise unrevokable
+  // until natural expiry) issued before this timestamp are rejected by
+  // JwtStrategy, so a captured/retained token stops working immediately.
+  @Column({ name: 'session_invalidated_at', type: 'timestamp with time zone', nullable: true })
+  sessionInvalidatedAt: Date | null;
   @CreateDateColumn({ name: 'created_at' }) createdAt: Date;
   @UpdateDateColumn({ name: 'updated_at' }) updatedAt: Date;
 }

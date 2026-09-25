@@ -213,6 +213,15 @@ export class AuthService {
       storedToken.isRevoked = true;
       await this.refreshTokenRepository.save(storedToken);
     }
+
+    // Revoking the refresh token alone only stops *future* refreshes — the
+    // currently-active access token is a stateless JWT with no revocation
+    // check, so it would otherwise keep authenticating until it naturally
+    // expires. Stamping this lets JwtStrategy reject any access token
+    // issued before now, so a protected page genuinely stops being
+    // reachable right away, not just up to an hour later.
+    await this.userRepository.update(payload.sub, { sessionInvalidatedAt: new Date() });
+
     this.logger.log('User logged out', { userId: payload.sub });
     return { message: 'Logged out' };
   }
@@ -221,7 +230,7 @@ export class AuthService {
     this.logger.log('Fetching current user', { userId });
     const user = await this.userRepository.findOne({ where: { id: userId } });
     if (!user) throw new UnauthorizedException('User not found');
-    const { passwordHash, ...result } = user;
+    const { passwordHash, sessionInvalidatedAt, ...result } = user;
     return result;
   }
 
@@ -231,7 +240,7 @@ export class AuthService {
     if (!user) throw new UnauthorizedException('User not found');
     Object.assign(user, dto);
     await this.userRepository.save(user);
-    const { passwordHash, ...result } = user;
+    const { passwordHash, sessionInvalidatedAt, ...result } = user;
     return result;
   }
 
