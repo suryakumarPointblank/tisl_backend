@@ -1,0 +1,804 @@
+[
+  {
+    "excel_row": 59,
+    "title": "Incidence and treatment of pulmonary vein stenosis after repair of total anomalous pulmonary venous connection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 63,
+    "title": "Recent Advances in Biomechanical Characterization of Thoracic Aortic Aneurysms",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 84,
+    "title": "Predictors and Outcomes of Cardiac Events following Thoracic Endovascular Aortic Repair in Descending Thoracic Aortic Aneurysm and Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 85,
+    "title": "Aortic balloon occlusion technique in total arch replacement with frozen elephant trunk after thoracic endovascular aortic repair",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 86,
+    "title": "The Y-stenting technique for bifurcation stenosis and bioprosthetic valve frame fracture prior to valve-in-valve transcatheter pulmonary valve replacement in a child",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 87,
+    "title": "Transradial and Transfemoral Approach in Patients with Prior Coronary Artery Bypass Grafting",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 94,
+    "title": "Acute type A aortic intramural hematoma and type A aortic dissection: correlation between the intimal tear features and pathogenesis",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 103,
+    "title": "Effects of inhaled nitric oxide for postoperative hypoxemia in acute type A aortic dissection: a retrospective observational study",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 112,
+    "title": "Antiplatelet Medications Protect Against Aortic Dissection and Rupture in Patients With Abdominal Aortic Aneurysms",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 120,
+    "title": "Long-term outcomes of surgical procedures for Marfan syndrome: aortic dissection versus aneurysm",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 128,
+    "title": "Branch-first Sun's procedure: early experience in patients with aortic dissection and aortic aneurysm",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 137,
+    "title": "Economic Burden and Healthcare Resource Use for Thoracic Aortic Dissections and Thoracic Aortic Aneurysms-A Population-Based Cost-of-Illness Analysis",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 138,
+    "title": "Economic Burden and Healthcare Resource Use for Thoracic Aortic Dissections and Thoracic Aortic Aneurysms A Population Based Cost of Illness Analysis",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 148,
+    "title": "A modified axillo femoral perfusion for acute type a aortic dissection accompanied with lower limb malperfusion",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 156,
+    "title": "AGE-RAGE stress play a role in aortic aneurysm: A comprehensive review and novel potential therapeutic target",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 167,
+    "title": "The Role of Dual-Source Computed Tomography Angiography in Evaluating the Aortic Arch Vessels in Acute Type A Aortic Dissection: A Retrospective Study of 42 Patients",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 168,
+    "title": "Stenting of an antegrade aortomesenteric bypass complicated by stent fracture and migration to the aortic bifurcation",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 177,
+    "title": "Clinical Impact of Visceral-to-Subcutaneous Fat Ratio in Patients with Acute Aortic Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 185,
+    "title": "Obstructive sleep apnea syndrome promotes the progression of aortic dissection via a - HIF-1alpha-MMPs MMPs associated pathway",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 193,
+    "title": "Genes Associated with Thoracic Aortic Aneurysm and Dissection: 2019 Update and Clinical Implications",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 195,
+    "title": "Efficacy and Safety of \"Coronary Artery Bypass Graft Angiography\" with Right Transradial Access versus Left Transradial Access and Femoral Access: a Retrospective Comparative Study",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 201,
+    "title": "Increased frequency of FBN1 frameshift and nonsense mutations in Marfan syndrome patients with aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 208,
+    "title": "Serum amyloid a protein as a potential biomarker in predicting acute onset and association with in-hospital death in acute aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 215,
+    "title": "Surgical Outcomes And Postoperative Descending Aorta Morphologic Remodeling After Thoracic Endovascular Aortic Repair For Acute And Chronic Type B Aortic Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 222,
+    "title": "Management of acute type A aortic dissection with acute lower extremities malperfusion",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 229,
+    "title": "Effect of massive blood transfusion on late outcomes after surgical repair of acute type A aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 236,
+    "title": "Extensive aortic surgery in acute aortic dissection type A on outcome - insights from 25 years single center experience",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 243,
+    "title": "Let-7f: A New Potential Circulating Biomarker Identified by miRNA Profiling of Cells Isolated from Human Abdominal Aortic Aneurysm",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 250,
+    "title": "The risk factors for postoperative cerebral complications in patients with Stanford type a aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 257,
+    "title": "Changes in Aortic Wall Thickness at a Site of Entry Tear on Computed Tomography before Development of Acute Aortic Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 264,
+    "title": "Simple Redo Proximal Thoracic Aortic Surgery with Peripheral Cardiopulmonary Bypass and Minimal Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 270,
+    "title": "Association of Platelet to Lymphocyte and Neutrophil to Lymphocyte Ratios with In-Hospital Mortality in Patients with Type A Acute Aortic Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 276,
+    "title": "Association of Aortic Aneurysms and Dissections With Subarachnoid Hemorrhage",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 282,
+    "title": "A New Aortic Root Reinforcement Technique for Acute Type A Aortic Dissection Surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 288,
+    "title": "Admission C-reactive protein and outcomes in acute aortic dissection: a systematic review",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 294,
+    "title": "Monocyte Subsets, Stanford-A Acute Aortic Dissection, and Carotid Artery Stenosis: New Evidences",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 300,
+    "title": "Functional Magnetic Resonance Imaging in the Evaluation of the Elastic Properties of Ascending Aortic Aneurysm",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 306,
+    "title": "Biomechanics of aortic wall failure with a focus on dissection and aneurysm: A review",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 312,
+    "title": "Y chromosome loss is associated with age-related male patients with abdominal aortic aneurysms",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 318,
+    "title": "MiR-574-5p: A Circulating Marker of Thoracic Aortic Aneurysm",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 324,
+    "title": "Predicting in-hospital death in patients with type B acute aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 330,
+    "title": "Risk score system for late aortic events in patients with uncomplicated type B aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 342,
+    "title": "Midterm cerebral outcomes of Stanford type A aortic dissection in patients who underwent novel triple-branched stent graft implantation combined with intraoperative monitoring of regional cerebral oxygen saturation",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 347,
+    "title": "Endovascular graft exclusion for treating Stanford type B acute aortic dissection in aged population",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 351,
+    "title": "Midterm prognosis of type B aortic dissection with and without dissecting aneurysm of descending thoracic aorta after endovascular repair",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 354,
+    "title": "Clinical Implications of Identifying Pathogenic Variants in Individuals With Thoracic Aortic Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 355,
+    "title": "Does the Cardiac Surgeon Accept Coronary Artery Bypass Grafting With Incomplete Revascularization for Patients With Low Ventricular Function and Complex Multivessel Coronary Disease?",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 357,
+    "title": "Non-operative Management of Type A Acute Aortic Syndromes: A Systematic Review and Meta-Analysis",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 360,
+    "title": "Optimal blood pressure control for patients after thoracic endovascular aortic repair of type B aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 361,
+    "title": "Risk Factors for Postoperative Delirium in Type A Aortic Dissection Patients: A Retrospective Study",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 363,
+    "title": "Impact of renal dysfunction on surgical outcomes in patients with aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 366,
+    "title": "Increased risk for the development of postoperative severe hypoxemia in obese women with acute type a aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 368,
+    "title": "Thoracic Aortic Aneurysm Growth in Bicuspid Aortic Valve Patients: Role of Aortic Stiffness and Pulsatile Hemodynamics",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 399,
+    "title": "Aortic dissection assessment by 4D phase-contrast MRI with hemodynamic parameters: the impact of stent type",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 401,
+    "title": "Early Detection of Undiagnosed Abdominal Aortic Aneurysm and Sub-Aneurysmal Aortic Dilatations in Patients with High-Risk Coronary Artery Disease: The Value of Targetted Screening Programme",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 417,
+    "title": "Clinical outcomes of multivessel coronary artery disease patients revascularized by robot-assisted vs conventional standard coronary artery bypass graft surgeries in real-world practice",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 419,
+    "title": "The strategy of cardiopulmonary bypass for total aortic arch replacement and the frozen elephant trunk technique with aortic balloon occlusion",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 420,
+    "title": "Postoperative microcirculatory perfusion and endothelial glycocalyx shedding following cardiac surgery with cardiopulmonary bypass",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 421,
+    "title": "Pulmonary artery perfusion versus no perfusion during cardiopulmonary bypass for open heart surgery in adults",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 422,
+    "title": "A Survey of Practices during Cardiopulmonary Bypass in India: An Indian Association of Cardiovascular and Thoracic Anesthesiologist Endeavor",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 423,
+    "title": "Effects of Minimal Extracorporeal Circulation on the Systemic Inflammatory Response and the Need for Transfusion after Coronary Bypass Grafting Surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 424,
+    "title": "Cardiopulmonary bypass and internal thoracic artery: Can roller or centrifugal pumps change vascular reactivity of the graft? The IPITA study: A randomized controlled clinical trial",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 426,
+    "title": "Predictors of Postoperative Atrial Fibrillation after Beating-Heart Coronary Artery Bypass Surgery: Is Cardiopulmonary Bypass a Risk Factor?",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 427,
+    "title": "Utilization of Percutaneous Mechanical Circulatory Support Devices in Cardiogenic Shock Complicating Acute Myocardial Infarction and High-Risk Percutaneous Coronary Interventions",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 429,
+    "title": "Off Pump Coronary Artery Bypass Grafting, 30 Years of Debate",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 430,
+    "title": "Case Report: Emergency CABG Following Failure of PTCA in a COVID-19 Patient",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 442,
+    "title": "Safety and Efficacy of Transcatheter Occlusion of Perimembranous Ventricular Septal Defect with Aortic Valve Prolapse: A Six-Year Follow-Up Study",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 463,
+    "title": "Type II Endoleak Nidus Volume on Arterial and Delayed Phases of Initial CT Angiography after Endovascular Abdominal Aortic Aneurysm Repair Predicts Persistent Endoleak and Aneurysm Sac Enlargement",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 464,
+    "title": "Thoracic Aortic Aneurysm and Factors Affecting Aortic Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 465,
+    "title": "Physical activity and the risk of abdominal aortic aneurysm: a systematic review and meta-analysis of prospective studies",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 468,
+    "title": "Clinical analysis of redo aortic root replacement after cardiac surgery: a retrospective study",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 469,
+    "title": "Stanford type A acute aortic dissection with proximal intimo-intimal intussusception: a case report and literature review",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 472,
+    "title": "Left subclavian artery revascularization in thoracic endovascular aortic repair: single center’s clinical experiences from 171 patients",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 487,
+    "title": "Methylprednisolone Plasma Concentrations During Cardiac Surgery With Cardiopulmonary Bypass in Pediatric Patients",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 490,
+    "title": "A 60-year-old woman with asymptomatic total thoracic–abdominal aortic aneurysm",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 493,
+    "title": "Early Efficacy of In Situ Fenestration with a Triple Chimney Technique for High-Risk Stanford Type A Aortic Dissection: A Single-Center Retrospective Study",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 500,
+    "title": "No-Touch Versus Conventional Vein Harvesting Techniques at 12 Months After Coronary Artery Bypass Grafting Surgery: Multicenter Randomized, Controlled Trial",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 502,
+    "title": "A New Aortic Arch Dissection Classification: The Fuwai Classification",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 516,
+    "title": "Association Between Postoperative Thrombocytopenia and Outcomes After Coronary Artery Bypass Grafting Surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 517,
+    "title": "Association between anion gap and mortality of aortic aneurysm in intensive care unit after open surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 531,
+    "title": "Performance of Lactate and CO2-Derived Parameters in Predicting Major Postoperative Complications After Cardiac Surgery With Cardiopulmonary Bypass: Protocol of a Diagnostic Accuracy Study",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 532,
+    "title": "Do continuous forms of intra-operative ultrafiltration enhance recovery after adult cardiac surgery with cardiopulmonary bypass? A protocol for systematic review and meta-analysis of randomized controlled trials",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 533,
+    "title": "Quality of life: modified triple-branched stent graft implantation versus frozen elephant trunk technique",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 534,
+    "title": "Frozen Elephant Trunk in Aortic Arch Disease: Different Devices for Different Pathologies",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 540,
+    "title": "Thoracic endovascular aortic repair increases stroke volume and regurgitant fraction in patients with aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 556,
+    "title": "Growth of ascending thoracic aortic aneurysm was minimal at sizes that do not meet criteria for surgical repair",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 560,
+    "title": "Etiology of stroke after thoracic endovascular aortic repair",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 570,
+    "title": "Insights on independent risk factors of stroke following Thoracic Endovascular Aortic Repair for Stanford Type B Aortic Dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 574,
+    "title": "CardiOttawa Waitlist Mortality Score to predict the probability of death while awaiting cardiac surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 579,
+    "title": "Comparison of the accuracy of Spectrum Medical Quantum or Terumo CDI 500",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 582,
+    "title": "Patients with aortic dissection has more postoperative discomfort symptoms",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 588,
+    "title": "Defining De Winter Electrocardiographic pattern due to type A aortic dissection",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 642,
+    "title": "Clinical outcomes EEG seizures in patients after mechanical circulatory support",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 643,
+    "title": "S100b, NSE, and KYNA- Three classical biomarkers of Neurocognitive Disorders After Cardiac Surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 647,
+    "title": "Associated risk factors Post TAPVC surgery.",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 656,
+    "title": "Repair of the extensive aortic pathology using either the CET or FET: A Review",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 662,
+    "title": "Clinical outcomes of the FET procedure.",
+    "status": "Skipped",
+    "notes": "Status: PDF unavailable - original download incomplete"
+  },
+  {
+    "excel_row": 670,
+    "title": "Function and inflammatory response in patients with AVR using bioprostheses.",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 676,
+    "title": "Lifelong oral anticoagulation is recommended for patients with a surgically implanted bioprosthetic heart valve and atrial fibrillation (AF).",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 680,
+    "title": "Congenital heart disease (CHD) transcatheter closure using transesophageal ultrasound guidance.",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 681,
+    "title": "Minimally invasive transcatheter closure of CHD under the guidance of transesophageal ultrasound",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 688,
+    "title": "Effect of clemastine fumarate in cardiopulmonary bypass patients",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 695,
+    "title": "Evaluating the accuracy of the ProAQT® sensor cardiac output in comparison with Pulmonary Artery Catheter (PAC)",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 696,
+    "title": "A simple-to-use nomogram for predicting prolonged mechanical ventilation for children after Ebstein anomaly corrective surgery: a retrospective cohort study",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 698,
+    "title": "Fluid management and red cell preservation during cardiac surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 702,
+    "title": "Methodology for fluid management and red cell preservation during cardiac surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 703,
+    "title": "Mid-term outcomes of the Bentall operation",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 704,
+    "title": "Broad overview of implanted durable LVADs.",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 710,
+    "title": "Inflow obstruction in left ventricular assist devices.",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 719,
+    "title": "Zero-defect nursing with respirational function exercise heart bypass surgery patients.",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 723,
+    "title": "Enhancing recovery after cardiac surgery from perfusionist side",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 724,
+    "title": "Adult Clinical Perfusion Practice Survey",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 728,
+    "title": "Post-Bentall procedure ‘pseudo’ pulmonary embolism",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 732,
+    "title": "Specific coagulation patterns and consequences in patients undergoing cardiac surgery due to infective endocarditis",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 737,
+    "title": "Understanding aortic pseudoaneurysm as a postsurgical complication.",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 745,
+    "title": "Isolated tricuspid valve surgery with mini thoracotomy and beating heart strategy.",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 746,
+    "title": "Predicting the presence of sarcopenia before adult cardiac surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 747,
+    "title": "Pediatric heart surgery with cardiopulmonary bypass & continuous ultrafiltration",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 748,
+    "title": "ALTO Endograft in patient with a Very Tight 10-mm Aortic Bifurcation",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 753,
+    "title": "A novel human cadaveric perfusion model with continuous extracorporeal femoral perfusion",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 756,
+    "title": "Cardiac Cachexia in Left Ventricular Assist Device Recipients : A case study",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 757,
+    "title": "LBP is a safe and feasible approach for aortic arch surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 764,
+    "title": "LVAD therapy improves MR and tricuspid regurgitation severity",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 765,
+    "title": "Post CPB complications",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 766,
+    "title": "CPB for total aortic arch replacement surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 773,
+    "title": "Frozen Elephant Trunk Implantation",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 788,
+    "title": "Outcomes of the Bentall procedure",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 796,
+    "title": "Clinical Outcomes for inflammatory response generated during the cardiopulmonary bypass method.",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 799,
+    "title": "Pathophysiology of CPB use with respect to renal dysfunction",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 800,
+    "title": "High flow high hematocrit bypass strategy.",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 803,
+    "title": "Practices based on evidence for frozen elephant trunks",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 804,
+    "title": "Monitoring Anticoagulation and the method of myocardial protection.",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 807,
+    "title": "Hemoadsorption in LVAD Surgery",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 809,
+    "title": "Debranching techniques in FET",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 812,
+    "title": "LVAD Surgery with Hemoadsorption",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 815,
+    "title": "LVAD for heart failure and myocardial recovery",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 816,
+    "title": "Bivalirudin for cardiopulmonary bypass",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 824,
+    "title": "Cardiopulmonary bypass's unique role in acute kidney injury: Mechanisms and prevention",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 828,
+    "title": "Factors influencing Lactate Levels in Cardiopulmonary Bypass",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 838,
+    "title": "Effective Extracorporeal Circulation in High-Risk CABG Patients",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 841,
+    "title": "Monocyte-to-lymphocyte multiplying platelets ratio: Valuable tool for managing AKI after cardiac surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 845,
+    "title": "Enhancing Cardiac Bypass Surgery with Goal-Directed Perfusion",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 853,
+    "title": "Intralipid Use at Reperfusion: Impact on Myocardial IRI in CABG",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 856,
+    "title": "Preoperative Intra-aortic Balloon Pump Reduces Mortality and ICU Stay in CABG Patients",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 866,
+    "title": "Ruptured Aorto-Iliac Aneurysm with Iliac Fistula: A Rare, Fatal Condition",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 876,
+    "title": "Next Gen Frozen Elephant Trunk: The Future of Aortic Disease Therapy",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 882,
+    "title": "Dextran Impairs Clotting in Mini Pump Circulation Model",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 886,
+    "title": "4D Flow Analysis of Biventricular Function Post-Arterial Switch Operation",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 898,
+    "title": "Off-Pump CABG: Safer Valve and Coronary Surgery",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 901,
+    "title": "David and Bentall Procedures: Effective Strategies for Treating TAAD",
+    "status": "Skipped",
+    "notes": "Status: PDF unavailable - original download incomplete"
+  },
+  {
+    "excel_row": 904,
+    "title": "Mastering Hybrid Aortic Arch Replacements: Essential Insights",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 908,
+    "title": "LVAD and Cryoballoon for ventricular tachycardia: Case Study",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 913,
+    "title": "Updated 2024 Protocols for Cardiopulmonary Bypass in Adult Cardiac Operations: Joint Guidance from EACTS, EACTAIC, and EBCP",
+    "status": "Migrated (new)"
+  },
+  {
+    "excel_row": 919,
+    "title": "Evolving Role of ECMO in Adult Respiratory Failure from Cardiorespiratory Disease",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 920,
+    "title": "Contemporary Role of Extracorporeal Membrane Oxygenation in Trauma",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  },
+  {
+    "excel_row": 921,
+    "title": "Effective Management of Massive Left Ventricular Thrombus During ECMO Support",
+    "status": "Skipped",
+    "notes": "Marked Remove"
+  }
+]
