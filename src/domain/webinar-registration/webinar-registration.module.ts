@@ -6,9 +6,10 @@ import { UserEntity } from '../user/user.entity';
 import { WebinarRegistrationService } from './webinar-registration.service';
 import { WebinarRegistrationController } from './webinar-registration.controller';
 import { WebinarRegistrationAdminController } from './webinar-registration-admin.controller';
+import { MailModule } from '../../infrastructure/mail/mail.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([WebinarRegistrationEntity, WebinarEntity, UserEntity])],
+  imports: [TypeOrmModule.forFeature([WebinarRegistrationEntity, WebinarEntity, UserEntity]), MailModule],
   controllers: [WebinarRegistrationController, WebinarRegistrationAdminController],
   providers: [WebinarRegistrationService],
   exports: [WebinarRegistrationService],

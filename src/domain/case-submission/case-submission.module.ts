@@ -4,9 +4,10 @@ import { CaseSubmissionEntity } from './case-submission.entity';
 import { CaseSubmissionService } from './case-submission.service';
 import { CaseSubmissionController } from './case-submission.controller';
 import { CaseSubmissionAdminController } from './case-submission-admin.controller';
+import { MailModule } from '../../infrastructure/mail/mail.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([CaseSubmissionEntity])],
+  imports: [TypeOrmModule.forFeature([CaseSubmissionEntity]), MailModule],
   controllers: [CaseSubmissionController, CaseSubmissionAdminController],
   providers: [CaseSubmissionService],
   exports: [CaseSubmissionService],

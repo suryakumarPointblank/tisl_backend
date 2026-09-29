@@ -44,4 +44,23 @@ export class MailService {
       throw error;
     }
   }
+
+  /**
+   * Notifies the general TISL inbox (GENERAL_INQUIRY_NOTIFICATION_EMAIL) about a CTA submission.
+   * Never throws: the submission is already saved, so a mail failure is only logged.
+   */
+  async notifyGeneral(subject: string, fields: Record<string, string | number | boolean | null | undefined>): Promise<void> {
+    const to = this.config.get<string>('GENERAL_INQUIRY_NOTIFICATION_EMAIL');
+    try {
+      await this.sendMail({
+        to,
+        subject,
+        text: Object.entries(fields)
+          .map(([label, value]) => `${label}: ${value ?? '-'}`)
+          .join('\n'),
+      });
+    } catch {
+      // Failure is already logged in sendMail.
+    }
+  }
 }

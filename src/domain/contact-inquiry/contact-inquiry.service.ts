@@ -31,7 +31,10 @@ export class ContactInquiryService {
   }
 
   private async notifyInquiry(inquiry: ContactInquiryEntity): Promise<void> {
-    const to = this.config.get<string>('CONTACT_INQUIRY_NOTIFICATION_EMAIL');
+    // "Request More Info" (no source) goes to medinfo; every other CTA goes to the general TISL inbox.
+    const to = this.config.get<string>(
+      inquiry.source ? 'GENERAL_INQUIRY_NOTIFICATION_EMAIL' : 'CONTACT_INQUIRY_NOTIFICATION_EMAIL',
+    );
     try {
       await this.mailService.sendMail({
         to,

@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { SlideDeckRequestEntity } from './slide-deck-request.entity';
 import { CreateSlideDeckRequestDto } from './dto/create-slide-deck-request.dto';
 import { Logger } from '../../common/utils/logger';
+import { MailService } from '../../infrastructure/mail/mail.service';
 
 @Injectable()
 export class SlideDeckRequestService {
@@ -12,6 +13,7 @@ export class SlideDeckRequestService {
   constructor(
     @InjectRepository(SlideDeckRequestEntity)
     private readonly repo: Repository<SlideDeckRequestEntity>,
+    private readonly mailService: MailService,
   ) {}
 
   findAllAdmin(): Promise<SlideDeckRequestEntity[]> {
@@ -26,6 +28,15 @@ export class SlideDeckRequestService {
   async create(dto: CreateSlideDeckRequestDto): Promise<SlideDeckRequestEntity> {
     this.logger.log('Creating slide deck request', { email: dto.email });
     const request = this.repo.create(dto);
-    return this.repo.save(request);
+    const saved = await this.repo.save(request);
+    await this.mailService.notifyGeneral(`New Slide Deck Request from ${dto.firstName} ${dto.lastName}`, {
+      Name: `${dto.firstName} ${dto.lastName}`,
+      Email: dto.email,
+      Speciality: dto.speciality,
+      'Content Item': dto.contentItemId,
+      'HCP Confirmed': dto.isHcpConfirmed,
+      'Consent Given': dto.isConsentGiven,
+    });
+    return saved;
   }
 }

@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { CaseSubmissionEntity } from './case-submission.entity';
 import { CreateCaseSubmissionDto } from './dto/create-case-submission.dto';
 import { Logger } from '../../common/utils/logger';
+import { MailService } from '../../infrastructure/mail/mail.service';
 
 @Injectable()
 export class CaseSubmissionService {
@@ -12,6 +13,7 @@ export class CaseSubmissionService {
   constructor(
     @InjectRepository(CaseSubmissionEntity)
     private readonly repo: Repository<CaseSubmissionEntity>,
+    private readonly mailService: MailService,
   ) {}
 
   findAllAdmin(): Promise<CaseSubmissionEntity[]> {
@@ -26,7 +28,17 @@ export class CaseSubmissionService {
   async create(dto: CreateCaseSubmissionDto, userId?: string): Promise<CaseSubmissionEntity> {
     this.logger.log('Creating case submission', { title: dto.title, submitterEmail: dto.submitterEmail });
     const submission = this.repo.create({ ...dto, userId: userId ?? null });
-    return this.repo.save(submission);
+    const saved = await this.repo.save(submission);
+    await this.mailService.notifyGeneral(`New Case Submission: ${dto.title}`, {
+      Title: dto.title,
+      'Therapy Area': dto.therapyArea,
+      Topic: dto.topic,
+      'Submitted By': dto.submitterName,
+      Email: dto.submitterEmail,
+      Institution: dto.submitterInstitution,
+      City: dto.submitterCity,
+    });
+    return saved;
   }
 
   async findAll(): Promise<CaseSubmissionEntity[]> {

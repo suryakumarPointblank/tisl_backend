@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { WebinarRegistrationEntity } from './webinar-registration.entity';
 import { CreateWebinarRegistrationDto } from './dto/create-webinar-registration.dto';
 import { Logger } from '../../common/utils/logger';
+import { MailService } from '../../infrastructure/mail/mail.service';
 
 @Injectable()
 export class WebinarRegistrationService {
@@ -12,6 +13,7 @@ export class WebinarRegistrationService {
   constructor(
     @InjectRepository(WebinarRegistrationEntity)
     private readonly registrationRepository: Repository<WebinarRegistrationEntity>,
+    private readonly mailService: MailService,
   ) {}
 
   findAllAdmin(): Promise<WebinarRegistrationEntity[]> {
@@ -34,7 +36,9 @@ export class WebinarRegistrationService {
       }
       if (existing.status === 'CANCELLED') {
         existing.status = 'REGISTERED';
-        return this.registrationRepository.save(existing);
+        const reactivated = await this.registrationRepository.save(existing);
+        await this.notifyRegistration(reactivated);
+        return reactivated;
       }
     }
 
@@ -53,7 +57,24 @@ export class WebinarRegistrationService {
       consentTerumo: dto.consentTerumo ?? false,
     });
 
-    return this.registrationRepository.save(registration);
+    const saved = await this.registrationRepository.save(registration);
+    await this.notifyRegistration(saved);
+    return saved;
+  }
+
+  private notifyRegistration(registration: WebinarRegistrationEntity): Promise<void> {
+    return this.mailService.notifyGeneral(
+      `New Webinar Registration from ${registration.firstName} ${registration.lastName}`,
+      {
+        Name: `${registration.firstName} ${registration.lastName}`,
+        Email: registration.email,
+        Mobile: registration.mobile,
+        Hospital: registration.hospital,
+        Speciality: registration.speciality,
+        'Attend Preference': registration.attendPreference,
+        'Webinar ID': registration.webinarId,
+      },
+    );
   }
 
   async findMyRegistrations(userId: string): Promise<WebinarRegistrationEntity[]> {
