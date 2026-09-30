@@ -9,7 +9,7 @@
     "format": "prettier --write \"**/*.js\"",
     "start": "node index.js",
     "start:dev": "nodemon",
-    "start:prod": "node dist/main",
+    "start:prod": "node dist/src/main",
     "build": "nest build",
     "test": "jest",
     "test:cov": "jest --coverage",
