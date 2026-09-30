@@ -6,7 +6,7 @@ import { UserEntity } from '../user/user.entity';
 import { UserFavoriteService } from './user-favorite.service';
 
 @ApiTags('User Favorites')
-@Controller('api/v1/user-favorites')
+@Controller('user-favorites')
 export class UserFavoriteController {
   constructor(private readonly userFavoriteService: UserFavoriteService) {}
 

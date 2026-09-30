@@ -8,7 +8,7 @@ import { GetUser } from '../../common/decorators/get-user.decorator';
 import { UserEntity } from '../user/user.entity';
 
 @ApiTags('Training Program Registrations')
-@Controller('api/v1/training-program-registrations')
+@Controller('training-program-registrations')
 export class TrainingProgramRegistrationController {
   constructor(
     private readonly trainingProgramRegistrationService: TrainingProgramRegistrationService,

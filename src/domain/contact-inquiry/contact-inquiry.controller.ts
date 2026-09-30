@@ -6,7 +6,7 @@ import { OptionalJwtGuard } from '../../common/guards/optional-jwt.guard';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 
 @ApiTags('Contact Inquiries')
-@Controller('api/v1/contact-inquiries')
+@Controller('contact-inquiries')
 export class ContactInquiryController {
   constructor(private readonly contactInquiryService: ContactInquiryService) {}
 

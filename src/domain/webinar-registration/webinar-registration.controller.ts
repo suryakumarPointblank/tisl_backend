@@ -7,7 +7,7 @@ import { GetUser } from '../../common/decorators/get-user.decorator';
 import { UserEntity } from '../user/user.entity';
 
 @ApiTags('Webinar Registrations')
-@Controller('api/v1/webinar-registrations')
+@Controller('webinar-registrations')
 export class WebinarRegistrationController {
   constructor(private readonly webinarRegistrationService: WebinarRegistrationService) {}
 

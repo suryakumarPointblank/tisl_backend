@@ -6,7 +6,7 @@ import { OptionalJwtGuard } from '../../common/guards/optional-jwt.guard';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 
 @ApiTags('Case Submissions')
-@Controller('api/v1/cases')
+@Controller('cases')
 export class CaseSubmissionController {
   constructor(private readonly caseSubmissionService: CaseSubmissionService) {}
 

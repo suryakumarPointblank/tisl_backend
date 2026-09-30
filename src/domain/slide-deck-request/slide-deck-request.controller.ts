@@ -4,7 +4,7 @@ import { SlideDeckRequestService } from './slide-deck-request.service';
 import { CreateSlideDeckRequestDto } from './dto/create-slide-deck-request.dto';
 
 @ApiTags('Slide Deck Requests')
-@Controller('api/v1/slide-deck-requests')
+@Controller('slide-deck-requests')
 export class SlideDeckRequestController {
   constructor(private readonly slideDeckRequestService: SlideDeckRequestService) {}
 

@@ -3,7 +3,7 @@ import { ApiTags, ApiOperation, ApiParam } from '@nestjs/swagger';
 import { ConditionService } from './condition.service';
 
 @ApiTags('Conditions')
-@Controller('api/v1/conditions')
+@Controller('conditions')
 export class ConditionController {
   constructor(private readonly conditionService: ConditionService) {}
 

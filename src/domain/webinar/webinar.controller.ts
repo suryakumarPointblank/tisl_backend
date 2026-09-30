@@ -3,7 +3,7 @@ import { ApiTags, ApiOperation, ApiQuery, ApiParam } from '@nestjs/swagger';
 import { WebinarService } from './webinar.service';
 
 @ApiTags('Webinars')
-@Controller('api/v1/webinars')
+@Controller('webinars')
 export class WebinarController {
   constructor(private readonly webinarService: WebinarService) {}
 

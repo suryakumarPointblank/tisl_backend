@@ -6,7 +6,7 @@ import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 
 @ApiTags('Content Items')
-@Controller('api/v1/content-items')
+@Controller('content-items')
 export class ContentItemController {
   constructor(private readonly contentItemService: ContentItemService) {}
 

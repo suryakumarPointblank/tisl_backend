@@ -4,7 +4,7 @@ import { WebinarInterestService } from './webinar-interest.service';
 import { CreateWebinarInterestDto } from './dto/create-webinar-interest.dto';
 
 @ApiTags('Webinar Interests')
-@Controller('api/v1/webinar-interests')
+@Controller('webinar-interests')
 export class WebinarInterestController {
   constructor(private readonly webinarInterestService: WebinarInterestService) {}
 

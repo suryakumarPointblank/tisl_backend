@@ -3,7 +3,7 @@ import { ApiTags, ApiOperation, ApiQuery, ApiParam } from '@nestjs/swagger';
 import { PatientContentService } from './patient-content.service';
 
 @ApiTags('Patient Content')
-@Controller('api/v1/patient-content')
+@Controller('patient-content')
 export class PatientContentController {
   constructor(private readonly patientContentService: PatientContentService) {}
 

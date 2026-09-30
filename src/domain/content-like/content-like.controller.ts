@@ -6,7 +6,7 @@ import { GetUser } from '../../common/decorators/get-user.decorator';
 import { UserEntity } from '../user/user.entity';
 
 @ApiTags('Content Likes')
-@Controller('api/v1/content-likes')
+@Controller('content-likes')
 export class ContentLikeController {
   constructor(private readonly contentLikeService: ContentLikeService) {}
 

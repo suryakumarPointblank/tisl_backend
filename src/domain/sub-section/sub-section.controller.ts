@@ -3,7 +3,7 @@ import { ApiTags, ApiOperation, ApiQuery, ApiParam } from '@nestjs/swagger';
 import { SubSectionService } from './sub-section.service';
 
 @ApiTags('Sub Sections')
-@Controller('api/v1/sub-sections')
+@Controller('sub-sections')
 export class SubSectionController {
   constructor(private readonly subSectionService: SubSectionService) {}
 
