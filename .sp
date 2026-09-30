@@ -1,1 +1,0 @@
-C:\Users\gsury\AppData\Local\Temp\claude\C--Users-gsury-AppData-Roaming-Claude-scratch-workspaces-db9dc093-1001-4712-8515-b16ecdbc721c-6073d017-59b1-4861-a84f-3dba9d8cc08f-scratch-2026-09-29-3f372e\55feb628-06fd-4e8e-b3de-826c959b41a5\scratchpad
