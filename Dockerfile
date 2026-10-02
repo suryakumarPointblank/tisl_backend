@@ -1,23 +1,17 @@
-# Use an official Node.js runtime as a parent image
-FROM node:20-alpine
-
-# Set the working directory in the container
+FROM node:20-alpine AS builder
 WORKDIR /usr/src/app
-
-# Copy package.json and package-lock.json
-COPY package*.json ./
-
-# Install dependencies
+COPY package.json ./
 RUN npm install
-
-# Copy the rest of your application code
 COPY . .
-
-# Build the NestJS application
 RUN npm run build
 
-# Expose the port your app runs on
+FROM node:20-alpine AS runner
+WORKDIR /usr/src/app
+ENV NODE_ENV=production
+COPY package.json ./
+RUN npm install --omit=dev
+COPY --from=builder /usr/src/app/dist ./dist
+
 EXPOSE 5000
 
-# Start the application
 CMD ["npm", "run", "start:prod"]
