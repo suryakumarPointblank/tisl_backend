@@ -36,7 +36,6 @@
     "@nestjs/typeorm": "^11.0.2",
     "@nestjs/websockets": "^11.1.27",
     "@types/multer": "^2.2.0",
-    "aws-sdk": "^2.1693.0",
     "bcrypt": "^6.0.0",
     "bull": "^4.16.5",
     "class-transformer": "^0.5.1",
