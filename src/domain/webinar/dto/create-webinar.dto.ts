@@ -8,5 +8,6 @@ export class CreateWebinarDto {
   @ApiProperty() @IsDateString() @IsNotEmpty() scheduledAt: string;
   @ApiPropertyOptional() @IsInt() @IsOptional() durationMinutes: number;
   @ApiPropertyOptional() @IsString() @IsOptional() registrationLink: string;
+  @ApiPropertyOptional() @IsString() @IsOptional() imageUrl: string;
   @ApiPropertyOptional() @IsBoolean() @IsOptional() isLive: boolean;
 }
