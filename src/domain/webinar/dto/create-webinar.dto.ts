@@ -1,8 +1,9 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, IsOptional, IsInt, IsUUID, IsBoolean, IsDateString } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional, IsInt, IsUUID, IsBoolean, IsDateString, IsIn } from 'class-validator';
 
 export class CreateWebinarDto {
   @ApiProperty() @IsUUID() @IsNotEmpty() therapyAreaId: string;
+  @ApiPropertyOptional({ enum: ['webinar', 'workshop'] }) @IsIn(['webinar', 'workshop']) @IsOptional() eventType: 'webinar' | 'workshop';
   @ApiProperty() @IsString() @IsNotEmpty() title: string;
   @ApiPropertyOptional() @IsString() @IsOptional() description: string;
   @ApiProperty() @IsDateString() @IsNotEmpty() scheduledAt: string;

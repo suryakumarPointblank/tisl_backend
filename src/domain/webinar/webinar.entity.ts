@@ -25,6 +25,7 @@ export class WebinarEntity {
   @JoinColumn({ name: 'therapy_area_id' })
   therapyArea: TherapyAreaEntity;
 
+  @Column({ name: 'event_type', type: 'varchar', default: 'webinar' }) eventType: 'webinar' | 'workshop';
   @Column({ type: 'varchar' }) title: string;
   @Column({ type: 'text', nullable: true }) description: string;
   @Column({ name: 'scheduled_at', type: 'timestamp with time zone' }) scheduledAt: Date;
