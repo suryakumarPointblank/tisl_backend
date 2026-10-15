@@ -31,6 +31,7 @@ export class WebinarEntity {
   @Column({ name: 'duration_minutes', type: 'int', nullable: true }) durationMinutes: number;
   @Column({ name: 'registration_link', type: 'text', nullable: true }) registrationLink: string;
   @Column({ name: 'image_url', type: 'varchar', nullable: true }) imageUrl: string | null;
+  @Column({ name: 'zoom_link', type: 'text', nullable: true }) zoomLink: string | null;
   @Column({ name: 'is_live', type: 'boolean', default: false }) isLive: boolean;
   @Column({ name: 'is_active', type: 'boolean', default: true }) isActive: boolean;
 

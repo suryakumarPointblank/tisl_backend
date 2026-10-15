@@ -9,6 +9,7 @@ export class UpdateWebinarDto {
   @ApiPropertyOptional() @IsInt() @IsOptional() durationMinutes: number;
   @ApiPropertyOptional() @IsString() @IsOptional() registrationLink: string;
   @ApiPropertyOptional() @IsString() @IsOptional() imageUrl: string;
+  @ApiPropertyOptional() @IsString() @IsOptional() zoomLink: string;
   @ApiPropertyOptional() @IsBoolean() @IsOptional() isLive: boolean;
   @ApiPropertyOptional() @IsBoolean() @IsOptional() isActive: boolean;
 }
