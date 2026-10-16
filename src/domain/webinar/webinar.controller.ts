@@ -7,6 +7,12 @@ import { WebinarService } from './webinar.service';
 export class WebinarController {
   constructor(private readonly webinarService: WebinarService) {}
 
+  @Get('all')
+  @ApiOperation({ summary: 'Get all active webinars, regardless of date' })
+  findAll() {
+    return this.webinarService.findAll();
+  }
+
   @Get('upcoming')
   @ApiOperation({ summary: 'Get all upcoming webinars' })
   findUpcoming() {

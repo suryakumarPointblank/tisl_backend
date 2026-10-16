@@ -15,6 +15,15 @@ export class WebinarService {
     private readonly webinarRepository: Repository<WebinarEntity>,
   ) {}
 
+  async findAll(): Promise<WebinarEntity[]> {
+    this.logger.log('Fetching all active webinars');
+    return this.webinarRepository.find({
+      where: { isActive: true },
+      order: { scheduledAt: 'DESC' },
+      relations: { therapyArea: true, faculty: true },
+    });
+  }
+
   async findUpcoming(): Promise<WebinarEntity[]> {
     this.logger.log('Fetching upcoming webinars');
     return this.webinarRepository.find({
