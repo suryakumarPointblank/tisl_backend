@@ -59,13 +59,15 @@ export class TrainingProgramRegistrationService {
 
     const saved = await this.registrationRepository.save(registration);
 
-    if (dto.batchId) {
-      const batch = await this.batchRepository.findOne({ where: { id: dto.batchId } });
-      if (batch && batch.seatsAvailable > 0) {
-        batch.seatsAvailable = batch.seatsAvailable - 1;
-        await this.batchRepository.save(batch);
-      }
-    }
+    // Seat-limit enforcement disabled for now, per request - registration should
+    // never be blocked by seat count. Commented out, not removed, to restore later.
+    // if (dto.batchId) {
+    //   const batch = await this.batchRepository.findOne({ where: { id: dto.batchId } });
+    //   if (batch && batch.seatsAvailable > 0) {
+    //     batch.seatsAvailable = batch.seatsAvailable - 1;
+    //     await this.batchRepository.save(batch);
+    //   }
+    // }
 
     try {
       await this.sendConfirmationEmail(saved.id);
