@@ -21,6 +21,19 @@ async function bootstrap(): Promise<void> {
 
   app.use(helmet({ contentSecurityPolicy: process.env.NODE_ENV === 'production' ? undefined : false }));
 
+  // Express's default ETag generation triggers 304 Not Modified on conditional
+  // GETs. Cloudflare (proxying everything in front of this API) was caching
+  // one of those 304s at the edge and serving it to every origin regardless
+  // of Origin header, so a request from a newly-added origin got a cached
+  // response with CORS headers for a different origin - browsers then
+  // correctly block it client-side. API responses shouldn't be cached by an
+  // intermediary at all, so disable both at the source.
+  app.getHttpAdapter().getInstance().set('etag', false);
+  app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store');
+    next();
+  });
+
   app.enableCors({
     origin: (process.env.CORS_ORIGINS || '*').split(','),
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
