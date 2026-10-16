@@ -28,7 +28,7 @@ export class WebinarEntity {
   @Column({ name: 'event_type', type: 'varchar', default: 'webinar' }) eventType: 'webinar' | 'workshop';
   @Column({ type: 'varchar' }) title: string;
   @Column({ type: 'text', nullable: true }) description: string;
-  @Column({ name: 'scheduled_at', type: 'timestamp with time zone' }) scheduledAt: Date;
+  @Column({ name: 'scheduled_at', type: 'timestamp with time zone', nullable: true }) scheduledAt: Date | null;
   @Column({ name: 'duration_minutes', type: 'int', nullable: true }) durationMinutes: number;
   @Column({ name: 'registration_link', type: 'text', nullable: true }) registrationLink: string;
   @Column({ name: 'image_url', type: 'varchar', nullable: true }) imageUrl: string | null;

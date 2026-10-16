@@ -6,7 +6,7 @@ export class CreateWebinarDto {
   @ApiPropertyOptional({ enum: ['webinar', 'workshop'] }) @IsIn(['webinar', 'workshop']) @IsOptional() eventType: 'webinar' | 'workshop';
   @ApiProperty() @IsString() @IsNotEmpty() title: string;
   @ApiPropertyOptional() @IsString() @IsOptional() description: string;
-  @ApiProperty() @IsDateString() @IsNotEmpty() scheduledAt: string;
+  @ApiPropertyOptional() @IsDateString() @IsOptional() scheduledAt: string;
   @ApiPropertyOptional() @IsInt() @IsOptional() durationMinutes: number;
   @ApiPropertyOptional() @IsString() @IsOptional() registrationLink: string;
   @ApiPropertyOptional() @IsString() @IsOptional() imageUrl: string;
