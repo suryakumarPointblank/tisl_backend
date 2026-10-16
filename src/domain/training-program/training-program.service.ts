@@ -81,7 +81,8 @@ export class TrainingProgramService {
       venue: dto.venue,
       city: dto.city,
       seatsTotal: dto.seatsTotal ?? 8,
-      seatsAvailable: dto.seatsTotal ?? 8,
+      seatsAvailable: dto.seatsAvailable ?? dto.seatsTotal ?? 8,
+      ...(dto.status ? { status: dto.status } : {}),
     });
     return this.batchRepository.save(batch);
   }
