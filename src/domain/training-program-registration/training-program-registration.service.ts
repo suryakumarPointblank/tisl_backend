@@ -44,7 +44,7 @@ export class TrainingProgramRegistrationService {
     const registration = this.registrationRepository.create({
       userId: userId ?? null,
       programId: dto.programId,
-      batchId: dto.batchId,
+      batchId: dto.batchId ?? null,
       firstName: dto.firstName,
       lastName: dto.lastName,
       mobile: dto.mobile,
@@ -59,10 +59,12 @@ export class TrainingProgramRegistrationService {
 
     const saved = await this.registrationRepository.save(registration);
 
-    const batch = await this.batchRepository.findOne({ where: { id: dto.batchId } });
-    if (batch && batch.seatsAvailable > 0) {
-      batch.seatsAvailable = batch.seatsAvailable - 1;
-      await this.batchRepository.save(batch);
+    if (dto.batchId) {
+      const batch = await this.batchRepository.findOne({ where: { id: dto.batchId } });
+      if (batch && batch.seatsAvailable > 0) {
+        batch.seatsAvailable = batch.seatsAvailable - 1;
+        await this.batchRepository.save(batch);
+      }
     }
 
     try {

@@ -10,7 +10,9 @@ import {
 
 export class CreateTrainingProgramRegistrationDto {
   @ApiProperty() @IsUUID() @IsNotEmpty() programId: string;
-  @ApiProperty() @IsUUID() @IsNotEmpty() batchId: string;
+  // Optional: some programs have no batch yet (date/venue not confirmed) - registration
+  // then records interest against the programme alone, with no batch to attach to.
+  @ApiPropertyOptional() @IsUUID() @IsOptional() batchId: string;
   @ApiProperty() @IsString() @IsNotEmpty() firstName: string;
   @ApiProperty() @IsString() @IsNotEmpty() lastName: string;
   @ApiPropertyOptional() @IsString() @IsOptional() mobile: string;

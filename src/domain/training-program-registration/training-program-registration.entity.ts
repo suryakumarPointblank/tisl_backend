@@ -32,11 +32,11 @@ export class TrainingProgramRegistrationEntity {
   @JoinColumn({ name: 'program_id' })
   program: TrainingProgramEntity;
 
-  @Column({ name: 'batch_id', type: 'uuid' })
+  @Column({ name: 'batch_id', type: 'uuid', nullable: true })
   @Index()
-  batchId: string;
+  batchId: string | null;
 
-  @ManyToOne(() => TrainingProgramBatchEntity, { onDelete: 'CASCADE' })
+  @ManyToOne(() => TrainingProgramBatchEntity, { nullable: true, onDelete: 'CASCADE' })
   @JoinColumn({ name: 'batch_id' })
   batch: TrainingProgramBatchEntity;
 
