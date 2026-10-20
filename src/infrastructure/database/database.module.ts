@@ -23,6 +23,7 @@ import { TrainingProgramRegistrationEntity } from '../../domain/training-program
 import { UserFavoriteEntity } from '../../domain/user-favorite/user-favorite.entity';
 import { SpecialityEntity } from '../../domain/speciality/speciality.entity';
 import { SiteConfigEntity } from '../../domain/site-config/site-config.entity';
+import { HcpConsentEntity } from '../../domain/hcp-consent/hcp-consent.entity';
 
 @Module({
   imports: [
@@ -59,6 +60,7 @@ import { SiteConfigEntity } from '../../domain/site-config/site-config.entity';
           UserFavoriteEntity,
           SpecialityEntity,
           SiteConfigEntity,
+          HcpConsentEntity,
         ],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: configService.get('NODE_ENV') === 'development',
