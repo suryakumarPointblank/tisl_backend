@@ -9,6 +9,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
 import { UserEntity } from '../../domain/user/user.entity';
 import { RefreshTokenEntity } from './refresh-token.entity';
 import { PasswordUtil } from '../../common/utils/password.util';
+import { GainLmsService } from '../../infrastructure/gain-lms/gain-lms.service';
 
 @Module({
   imports: [
@@ -23,7 +24,7 @@ import { PasswordUtil } from '../../common/utils/password.util';
       }),
     }),
   ],
-  providers: [AuthService, JwtStrategy, PasswordUtil],
+  providers: [AuthService, JwtStrategy, PasswordUtil, GainLmsService],
   controllers: [AuthController],
   exports: [AuthService, JwtModule, PassportModule],
 })

@@ -48,6 +48,7 @@
     "google-auth-library": "^9.15.1",
     "helmet": "^8.2.0",
     "multer": "^2.2.0",
+    "mysql2": "^3.24.6",
     "nest-commander": "^3.20.1",
     "nodemailer": "^9.0.1",
     "passport": "^0.7.0",

@@ -13,6 +13,7 @@ import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import { GoogleRegisterDto } from './dto/google-register.dto';
 import { UpdateMyProfileDto } from './dto/update-my-profile.dto';
+import { GainLmsService } from '../../infrastructure/gain-lms/gain-lms.service';
 
 @Injectable()
 export class AuthService {
@@ -25,6 +26,7 @@ export class AuthService {
     private readonly jwtService: JwtService,
     private readonly passwordUtil: PasswordUtil,
     private readonly configService: ConfigService,
+    private readonly gainLmsService: GainLmsService,
   ) {
     this.googleClient = new OAuth2Client(this.configService.get('GOOGLE_CLIENT_ID'));
   }
@@ -201,7 +203,7 @@ export class AuthService {
         secret: this.configService.get('JWT_REFRESH_SECRET'),
       });
     } catch {
-      // Token already invalid/expired — nothing to revoke, but logout should
+      // Token already invalid/expired - nothing to revoke, but logout should
       // still succeed since the client is clearing its own state regardless.
       return { message: 'Logged out' };
     }
@@ -214,7 +216,7 @@ export class AuthService {
       await this.refreshTokenRepository.save(storedToken);
     }
 
-    // Revoking the refresh token alone only stops *future* refreshes — the
+    // Revoking the refresh token alone only stops *future* refreshes - the
     // currently-active access token is a stateless JWT with no revocation
     // check, so it would otherwise keep authenticating until it naturally
     // expires. Stamping this lets JwtStrategy reject any access token
@@ -231,7 +233,8 @@ export class AuthService {
     const user = await this.userRepository.findOne({ where: { id: userId } });
     if (!user) throw new UnauthorizedException('User not found');
     const { passwordHash, sessionInvalidatedAt, ...result } = user;
-    return result;
+    const gainAccess = await this.gainLmsService.getAccess(user.email);
+    return { ...result, gainAccess };
   }
 
   async updateMyProfile(userId: string, dto: UpdateMyProfileDto) {
@@ -246,7 +249,7 @@ export class AuthService {
 
   // Refresh tokens are long, already-random JWTs (not low-entropy secrets
   // like passwords), so a fast deterministic digest is the right tool for
-  // exact-match storage/lookup here — bcrypt (used for real passwords
+  // exact-match storage/lookup here - bcrypt (used for real passwords
   // elsewhere in this file) silently truncates its input at 72 bytes, and
   // since these JWTs share a long common prefix across repeated logins for
   // the same user (identical sub/email/role, differing iat/exp near the
