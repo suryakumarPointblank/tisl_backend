@@ -3,7 +3,38 @@ import {
   CreateDateColumn, UpdateDateColumn, Index,
 } from 'typeorm';
 
-export const UserRole = { HCP: 'HCP', ADMIN: 'ADMIN' } as const;
+export const UserRole = {
+  HCP: 'HCP',
+  ADMIN: 'ADMIN',
+  // Mirrors the legacy Laravel site's `users.user_type` enum, carried over so
+  // migrated accounts keep their original role instead of being flattened to HCP.
+  SUPERADMIN: 'SUPERADMIN',
+  KOL: 'KOL',
+  LEARNER: 'LEARNER',
+  VIDEO_SPEAKER: 'VIDEO_SPEAKER',
+  CTOUSER: 'CTOUSER',
+  ACVSUSER: 'ACVSUSER',
+  CVTUSER: 'CVTUSER',
+  ICCK: 'ICCK',
+  ITC: 'ITC',
+  MINI: 'MINI',
+  ISECT: 'ISECT',
+  LIVEBR: 'LIVEBR',
+  LIVEBL: 'LIVEBL',
+  LIVECT: 'LIVECT',
+  LIVEVS: 'LIVEVS',
+  LIVEBT: 'LIVEBT',
+  IJCTO: 'IJCTO',
+  CSINIC: 'CSINIC',
+  TCT: 'TCT',
+  KIMS: 'KIMS',
+  IACTSCON: 'IACTSCON',
+  INDLV24: 'INDLV24',
+  NIC24: 'NIC24',
+  IACTS25: 'IACTS25',
+  INDLV25: 'INDLV25',
+  CSI_NIC25: 'CSI-NIC25',
+} as const;
 export const UserStatus = { ACTIVE: 'ACTIVE', PENDING: 'PENDING', DISABLED: 'DISABLED' } as const;
 
 @Entity('users')
@@ -12,7 +43,7 @@ export class UserEntity {
   @Column({ name: 'first_name', type: 'varchar' }) firstName: string;
   @Column({ name: 'last_name', type: 'varchar', nullable: true }) lastName: string;
   @Column({ type: 'varchar', unique: true }) @Index() email: string;
-  @Column({ type: 'varchar', unique: true }) @Index() mobile: string;
+  @Column({ type: 'varchar', unique: true, nullable: true }) @Index() mobile: string | null;
   @Column({ name: 'password_hash', type: 'varchar', nullable: true }) passwordHash: string | null;
   @Column({ type: 'varchar', default: 'local' }) provider: string;
   @Column({ name: 'google_id', type: 'varchar', nullable: true, unique: true }) googleId: string | null;
@@ -23,6 +54,10 @@ export class UserEntity {
   @Column({ type: 'varchar', nullable: true }) designation: string;
   @Column({ type: 'varchar', nullable: true }) profession: string;
   @Column({ type: 'varchar', nullable: true }) speciality: string;
+  // Free-text summary of which LMS course(s) a user has on VISTA/Gain, e.g.
+  // "VISTA (IC)" or "GAIN (NANTO Model)" - carried over from the legacy site,
+  // no equivalent system here to derive it from.
+  @Column({ name: 'lms_access', type: 'varchar', nullable: true }) lmsAccess: string | null;
   @Column({ name: 'practicing_since', type: 'date', nullable: true }) practicingSince: string;
   @Column({ name: 'medical_reg_no', type: 'varchar', nullable: true }) medicalRegNo: string;
   @Column({ name: 'medical_reg_year', type: 'int', nullable: true }) medicalRegYear: number;
