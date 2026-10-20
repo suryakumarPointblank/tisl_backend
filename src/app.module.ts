@@ -13,6 +13,7 @@ import { PatientContentModule } from './domain/patient-content/patient-content.m
 import { WebinarModule } from './domain/webinar/webinar.module';
 import { UserModule } from './domain/user/user.module';
 import { ContactInquiryModule } from './domain/contact-inquiry/contact-inquiry.module';
+import { HcpConsentModule } from './domain/hcp-consent/hcp-consent.module';
 import { CaseSubmissionModule } from './domain/case-submission/case-submission.module';
 import { SlideDeckRequestModule } from './domain/slide-deck-request/slide-deck-request.module';
 import { WebinarRegistrationModule } from './domain/webinar-registration/webinar-registration.module';
@@ -42,6 +43,7 @@ import { SearchModule } from './domain/search/search.module';
     WebinarModule,
     UserModule,
     ContactInquiryModule,
+    HcpConsentModule,
     CaseSubmissionModule,
     SlideDeckRequestModule,
     WebinarRegistrationModule,
