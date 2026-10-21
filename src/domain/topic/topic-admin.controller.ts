@@ -7,13 +7,13 @@ import { TopicService } from './topic.service';
 import { CreateTopicDto } from './dto/create-topic.dto';
 import { UpdateTopicDto } from './dto/update-topic.dto';
 
-@ApiTags('Admin — Topics')
+@ApiTags('Admin - Topics')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/topics')
 export class TopicAdminController {
-  constructor(private readonly topicService: TopicService) {}
+  constructor(private readonly topicService: TopicService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all topics (admin)' })

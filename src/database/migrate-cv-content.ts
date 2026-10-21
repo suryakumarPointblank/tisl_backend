@@ -163,7 +163,7 @@ async function main() {
       status: 'Migrated',
       notes: row.url
         ? 'Linked to original terumoindiaskilllab.com URL (fileUrl resolution pass not yet run for CV).'
-        : 'No source URL in sheet (presentation slide deck) — created without fileUrl.',
+        : 'No source URL in sheet (presentation slide deck) - created without fileUrl.',
     });
   }
 

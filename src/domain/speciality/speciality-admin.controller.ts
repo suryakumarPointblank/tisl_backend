@@ -7,13 +7,13 @@ import { SpecialityService } from './speciality.service';
 import { CreateSpecialityDto } from './dto/create-speciality.dto';
 import { UpdateSpecialityDto } from './dto/update-speciality.dto';
 
-@ApiTags('Admin — Specialities')
+@ApiTags('Admin - Specialities')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/specialities')
 export class SpecialityAdminController {
-  constructor(private readonly specialityService: SpecialityService) {}
+  constructor(private readonly specialityService: SpecialityService) { }
 
   @Get() @ApiOperation({ summary: 'List all specialities (admin)' })
   findAll() { return this.specialityService.findAllAdmin(); }

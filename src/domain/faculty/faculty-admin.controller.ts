@@ -7,13 +7,13 @@ import { FacultyService } from './faculty.service';
 import { CreateFacultyDto } from './dto/create-faculty.dto';
 import { UpdateFacultyDto } from './dto/update-faculty.dto';
 
-@ApiTags('Admin — Faculty')
+@ApiTags('Admin - Faculty')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/faculty')
 export class FacultyAdminController {
-  constructor(private readonly facultyService: FacultyService) {}
+  constructor(private readonly facultyService: FacultyService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all faculty (admin)' })

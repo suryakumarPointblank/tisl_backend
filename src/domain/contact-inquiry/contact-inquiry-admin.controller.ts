@@ -5,13 +5,13 @@ import { RolesGuard } from '../../common/guards/roles.guard';
 import { Roles } from '../../common/decorators/roles.decorator';
 import { ContactInquiryService } from './contact-inquiry.service';
 
-@ApiTags('Admin — Contact Inquiries')
+@ApiTags('Admin - Contact Inquiries')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/contact-inquiries')
 export class ContactInquiryAdminController {
-  constructor(private readonly contactInquiryService: ContactInquiryService) {}
+  constructor(private readonly contactInquiryService: ContactInquiryService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all contact inquiries (admin)' })

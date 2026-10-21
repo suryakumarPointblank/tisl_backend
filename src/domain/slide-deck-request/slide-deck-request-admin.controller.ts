@@ -5,13 +5,13 @@ import { RolesGuard } from '../../common/guards/roles.guard';
 import { Roles } from '../../common/decorators/roles.decorator';
 import { SlideDeckRequestService } from './slide-deck-request.service';
 
-@ApiTags('Admin — Slide Deck Requests')
+@ApiTags('Admin - Slide Deck Requests')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/slide-deck-requests')
 export class SlideDeckRequestAdminController {
-  constructor(private readonly slideDeckRequestService: SlideDeckRequestService) {}
+  constructor(private readonly slideDeckRequestService: SlideDeckRequestService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all slide deck requests (admin)' })

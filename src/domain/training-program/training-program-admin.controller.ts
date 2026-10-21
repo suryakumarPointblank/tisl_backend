@@ -7,13 +7,13 @@ import { TrainingProgramService } from './training-program.service';
 import { CreateTrainingProgramDto } from './dto/create-training-program.dto';
 import { CreateTrainingProgramBatchDto } from './dto/create-training-program-batch.dto';
 
-@ApiTags('Admin — Training Programs')
+@ApiTags('Admin - Training Programs')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/training-programs')
 export class TrainingProgramAdminController {
-  constructor(private readonly trainingProgramService: TrainingProgramService) {}
+  constructor(private readonly trainingProgramService: TrainingProgramService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all training programs (admin)' })

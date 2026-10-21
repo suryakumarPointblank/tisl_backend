@@ -6,13 +6,13 @@ import { Roles } from '../../common/decorators/roles.decorator';
 import { SiteConfigService } from './site-config.service';
 import { UpsertSiteConfigDto } from './dto/upsert-site-config.dto';
 
-@ApiTags('Admin — Site Config')
+@ApiTags('Admin - Site Config')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/site-config')
 export class SiteConfigAdminController {
-  constructor(private readonly siteConfigService: SiteConfigService) {}
+  constructor(private readonly siteConfigService: SiteConfigService) { }
 
   @Get() @ApiOperation({ summary: 'Get all site config entries (admin)' })
   getAll() { return this.siteConfigService.getAll(); }

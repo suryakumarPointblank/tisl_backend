@@ -7,13 +7,13 @@ import { ConditionService } from './condition.service';
 import { CreateConditionDto } from './dto/create-condition.dto';
 import { UpdateConditionDto } from './dto/update-condition.dto';
 
-@ApiTags('Admin — Conditions')
+@ApiTags('Admin - Conditions')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/conditions')
 export class ConditionAdminController {
-  constructor(private readonly conditionService: ConditionService) {}
+  constructor(private readonly conditionService: ConditionService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all conditions (admin)' })

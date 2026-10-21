@@ -7,13 +7,13 @@ import { WebinarService } from './webinar.service';
 import { CreateWebinarDto } from './dto/create-webinar.dto';
 import { UpdateWebinarDto } from './dto/update-webinar.dto';
 
-@ApiTags('Admin — Webinars')
+@ApiTags('Admin - Webinars')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/webinars')
 export class WebinarAdminController {
-  constructor(private readonly webinarService: WebinarService) {}
+  constructor(private readonly webinarService: WebinarService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all webinars (admin)' })

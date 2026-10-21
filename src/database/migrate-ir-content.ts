@@ -142,7 +142,7 @@ async function main() {
     // URL (e.g. vimeo.com/...) with the terumoindiaskilllab.com page kept in
     // contentData.originalSourceUrl. That resolution requires a JS-rendered browser
     // (the site is client-rendered; static fetch returns no player URL), which is
-    // out of scope here — so fileUrl falls back to the original page link directly.
+    // out of scope here - so fileUrl falls back to the original page link directly.
     const contentData: Record<string, unknown> = {
       level: row.level,
       access: row.access,
@@ -179,7 +179,7 @@ async function main() {
       sheet: row.sheet,
       title: row.title,
       status: 'Migrated',
-      notes: `Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically — page is client-rendered).${noteSuffix}`,
+      notes: `Linked to original terumoindiaskilllab.com URL (could not resolve to a direct media/Vimeo URL statically - page is client-rendered).${noteSuffix}`,
     });
   }
 

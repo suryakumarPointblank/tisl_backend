@@ -74,7 +74,7 @@ async function seed() {
         title: 'PCI Masters Program',
         slug: 'pci-masters-program',
         description:
-          'An immersive 2.5-day hands-on programme for interventional cardiologists seeking to advance procedural technique across complex PCI scenarios — bifurcation, CTO, high-bleeding risk, and left main interventions. Small-group format with live-case observation and skills lab simulation.',
+          'An immersive 2.5-day hands-on programme for interventional cardiologists seeking to advance procedural technique across complex PCI scenarios - bifurcation, CTO, high-bleeding risk, and left main interventions. Small-group format with live-case observation and skills lab simulation.',
         therapyArea: 'Interventional Cardiology',
         programType: 'PCI',
         durationDays: 2.5,
@@ -116,7 +116,7 @@ async function seed() {
         title: 'Interventional Radiology Fundamentals',
         slug: 'ir-fundamentals',
         description:
-          'A 3-day comprehensive programme covering core IR procedures — peripheral vascular, oncological embolisation, and vascular access. Structured for radiologists transitioning to interventional practice.',
+          'A 3-day comprehensive programme covering core IR procedures - peripheral vascular, oncological embolisation, and vascular access. Structured for radiologists transitioning to interventional practice.',
         therapyArea: 'Interventional Radiology',
         programType: 'IR',
         durationDays: 3,

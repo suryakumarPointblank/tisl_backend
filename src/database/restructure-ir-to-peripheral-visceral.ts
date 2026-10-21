@@ -16,7 +16,7 @@ dotenv.config();
 // Content-mapping decision (confirmed with the client-side requester): the
 // sitemap's finer topic lists (TACE/B-TACE/DEB-TACE/Access under oncology;
 // Access/PAD/CLTI/Vascular Closure under Peripheral) don't have a 1:1 home
-// for two existing buckets — "Interventional Oncology Therapies" (7 items)
+// for two existing buckets - "Interventional Oncology Therapies" (7 items)
 // and Vascular Disease's "General" (31 items). Rather than hand-classify
 // those 38 items, both get folded into a "General" topic (Oncology's is
 // literally renamed from "Interventional Oncology Therapies" -> "General",
@@ -95,7 +95,7 @@ async function main() {
   const peripheralSubId = peripheralSub[0].id;
 
   // ---------- 5. Oncology topics ----------
-  // Drop the pre-existing empty "General" topic under Oncology (0 items) —
+  // Drop the pre-existing empty "General" topic under Oncology (0 items) -
   // "Interventional Oncology Therapies" gets renamed to General instead below.
   await q(`DELETE FROM topics WHERE sub_section_id = $1 AND slug = 'general-oncology'`, [oncologySubId]);
   await q(

@@ -6,11 +6,11 @@ import * as path from 'path';
 dotenv.config();
 
 // Correction: the Journals sheet uses a red/green cell-fill color code on rows
-// with a blank Retain/Modify/Remove text value — a signal missed on the first
+// with a blank Retain/Modify/Remove text value - a signal missed on the first
 // migration pass (which treated all blank RRM rows as "include"). Red-filled
 // rows mean "remove", green means "migrate". All 71 red rows are IR.
 // Soft-deleting (is_active = false) rather than hard-deleting, since it's the
-// reversible interpretation of "removed" — content stays for audit/undo.
+// reversible interpretation of "removed" - content stays for audit/undo.
 
 const AppDataSource = new DataSource({
   type: 'postgres',

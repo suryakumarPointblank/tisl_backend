@@ -14,7 +14,7 @@ dotenv.config();
 // values matched real, curated Topic entities already in the DB hierarchy
 // (e.g. "Liver Cancer", "PAD"). For CV/AR, the "Sub-topic" column here is a
 // free-text micro-tag unique to almost every row (e.g. "AKI & CPB", "Bentall",
-// "Marfan Syndrome") — there is no matching Topic entity for ~130 of these,
+// "Marfan Syndrome") - there is no matching Topic entity for ~130 of these,
 // only a generic "General" topic per sub-section. Rather than explode the
 // navigation hierarchy with ~130 one-article "topics", every row is filed
 // under its sub-section's "General" topic, and the sheet's free-text

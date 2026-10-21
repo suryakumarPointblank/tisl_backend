@@ -16,9 +16,9 @@ dotenv.config();
 //
 // Matching by title against existing content_items:
 //  - Presentations: all 54 titles already exist (from the earlier Presentatio-sheet
-//    migration) — this pass just upgrades fileUrl where it's better/different.
+//    migration) - this pass just upgrades fileUrl where it's better/different.
 //  - Journals: only 7 of 712 titles match something already in the DB (the other 35
-//    of the old 42 Publication-sourced IC/IR items have no match here at all — left
+//    of the old 42 Publication-sourced IC/IR items have no match here at all - left
 //    untouched, still linking to the old page, flagged in the excel for review).
 //    The 7 matches get upgraded to the real PDF; the remaining ~705 are net-new.
 

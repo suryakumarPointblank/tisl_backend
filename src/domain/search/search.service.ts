@@ -12,7 +12,7 @@ import { ConditionEntity } from '../condition/condition.entity';
 import { PatientContentEntity } from '../patient-content/patient-content.entity';
 
 // Plain ILIKE won't connect "HCC" to content titled "Hepatocellular
-// Carcinoma" since they share no text — mirrors the same list used
+// Carcinoma" since they share no text - mirrors the same list used
 // client-side (tisl_frontend/src/lib/utils/search-synonyms.js) so both
 // directions match regardless of which layer ends up doing the matching.
 const SYNONYM_PAIRS: [string, string][] = [
@@ -59,7 +59,7 @@ export class SearchService {
     @InjectRepository(FacultyEntity) private readonly facultyRepo: Repository<FacultyEntity>,
     @InjectRepository(ConditionEntity) private readonly conditionRepo: Repository<ConditionEntity>,
     @InjectRepository(PatientContentEntity) private readonly patientContentRepo: Repository<PatientContentEntity>,
-  ) {}
+  ) { }
 
   async search(q: string) {
     const terms = expandQuery(q);

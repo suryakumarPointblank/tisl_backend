@@ -6,13 +6,13 @@ import { Roles } from '../../common/decorators/roles.decorator';
 import { UserService } from './user.service';
 import { UpdateUserStatusDto } from './dto/update-user-status.dto';
 
-@ApiTags('Admin — Users')
+@ApiTags('Admin - Users')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/users')
 export class UserAdminController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly userService: UserService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all HCP users' })

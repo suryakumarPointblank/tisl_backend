@@ -7,13 +7,13 @@ import { PatientContentService } from './patient-content.service';
 import { CreatePatientContentDto } from './dto/create-patient-content.dto';
 import { UpdatePatientContentDto } from './dto/update-patient-content.dto';
 
-@ApiTags('Admin — Patient Content')
+@ApiTags('Admin - Patient Content')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/patient-content')
 export class PatientContentAdminController {
-  constructor(private readonly patientContentService: PatientContentService) {}
+  constructor(private readonly patientContentService: PatientContentService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all patient content (admin)' })

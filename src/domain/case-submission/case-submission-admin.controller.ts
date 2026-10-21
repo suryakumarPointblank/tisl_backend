@@ -5,13 +5,13 @@ import { RolesGuard } from '../../common/guards/roles.guard';
 import { Roles } from '../../common/decorators/roles.decorator';
 import { CaseSubmissionService } from './case-submission.service';
 
-@ApiTags('Admin — Case Submissions')
+@ApiTags('Admin - Case Submissions')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/case-submissions')
 export class CaseSubmissionAdminController {
-  constructor(private readonly caseSubmissionService: CaseSubmissionService) {}
+  constructor(private readonly caseSubmissionService: CaseSubmissionService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all case submissions (admin)' })

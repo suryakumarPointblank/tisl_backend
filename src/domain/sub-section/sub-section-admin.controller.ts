@@ -7,13 +7,13 @@ import { SubSectionService } from './sub-section.service';
 import { CreateSubSectionDto } from './dto/create-sub-section.dto';
 import { UpdateSubSectionDto } from './dto/update-sub-section.dto';
 
-@ApiTags('Admin — Sub Sections')
+@ApiTags('Admin - Sub Sections')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/sub-sections')
 export class SubSectionAdminController {
-  constructor(private readonly subSectionService: SubSectionService) {}
+  constructor(private readonly subSectionService: SubSectionService) { }
 
   @Get()
   @ApiOperation({ summary: 'List all sub-sections (admin)' })

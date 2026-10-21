@@ -20,8 +20,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   async validate(payload: { sub: string; email: string; role: string; iat: number }) {
-    // Access tokens are otherwise stateless — unrevokable until they
-    // naturally expire — so this is what makes logout actually take effect
+    // Access tokens are otherwise stateless - unrevokable until they
+    // naturally expire - so this is what makes logout actually take effect
     // immediately instead of just for future refreshes.
     const user = await this.userRepository.findOne({ where: { id: payload.sub } });
     if (!user) throw new UnauthorizedException('User not found');

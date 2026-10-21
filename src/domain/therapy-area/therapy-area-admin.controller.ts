@@ -7,13 +7,13 @@ import { TherapyAreaService } from './therapy-area.service';
 import { CreateTherapyAreaDto } from './dto/create-therapy-area.dto';
 import { UpdateTherapyAreaDto } from './dto/update-therapy-area.dto';
 
-@ApiTags('Admin — Therapy Areas')
+@ApiTags('Admin - Therapy Areas')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard, RolesGuard)
 @Roles('ADMIN')
 @Controller('admin/therapy-areas')
 export class TherapyAreaAdminController {
-  constructor(private readonly therapyAreaService: TherapyAreaService) {}
+  constructor(private readonly therapyAreaService: TherapyAreaService) { }
 
   @Get() @ApiOperation({ summary: 'List all therapy areas (admin)' })
   findAll() { return this.therapyAreaService.findAllAdmin(); }
