@@ -15,4 +15,5 @@ export class UpdateContentItemDto {
   @ApiPropertyOptional() @IsBoolean() @IsOptional() isActive?: boolean;
   @ApiPropertyOptional() @IsBoolean() @IsOptional() isReviewed?: boolean;
   @ApiPropertyOptional() @IsString() @IsOptional() remarks?: string;
+  @ApiPropertyOptional() @IsBoolean() @IsOptional() isTrending?: boolean;
 }

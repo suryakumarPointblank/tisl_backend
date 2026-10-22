@@ -21,6 +21,12 @@ export class ContentItemController {
     return this.contentItemService.findByTopic(topicId, { contentType });
   }
 
+  @Get('trending')
+  @ApiOperation({ summary: 'Get content items marked as trending' })
+  findTrending() {
+    return this.contentItemService.findTrending();
+  }
+
   @Get('history/my')
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth('JWT-auth')

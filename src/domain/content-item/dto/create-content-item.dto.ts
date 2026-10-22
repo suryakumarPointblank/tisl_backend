@@ -1,5 +1,5 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IsString, IsNotEmpty, IsOptional, IsInt, IsUUID, IsObject, IsDateString } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional, IsInt, IsUUID, IsObject, IsDateString, IsBoolean } from 'class-validator';
 
 export class CreateContentItemDto {
   @ApiProperty() @IsUUID() @IsNotEmpty() topicId: string;
@@ -12,4 +12,5 @@ export class CreateContentItemDto {
   @ApiPropertyOptional() @IsString() @IsOptional() thumbnailUrl?: string;
   @ApiPropertyOptional() @IsObject() @IsOptional() contentData?: Record<string, unknown>;
   @ApiPropertyOptional() @IsDateString() @IsOptional() publishedAt?: string;
+  @ApiPropertyOptional() @IsBoolean() @IsOptional() isTrending?: boolean;
 }

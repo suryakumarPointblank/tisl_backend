@@ -31,6 +31,20 @@ export class ContentItemService {
     return qb.orderBy('ci.publishedAt', 'DESC').getMany();
   }
 
+  async findTrending(): Promise<ContentItemEntity[]> {
+    this.logger.log('Fetching trending content items');
+    return this.contentItemRepository
+      .createQueryBuilder('ci')
+      .leftJoinAndSelect('ci.faculty', 'faculty')
+      .leftJoinAndSelect('ci.topic', 'topic')
+      .leftJoinAndSelect('topic.subSection', 'subSection')
+      .leftJoinAndSelect('subSection.therapyArea', 'therapyArea')
+      .where('ci.isActive = true')
+      .andWhere('ci.isTrending = true')
+      .orderBy('ci.publishedAt', 'DESC')
+      .getMany();
+  }
+
   async findByFaculty(facultyId: string): Promise<ContentItemEntity[]> {
     this.logger.log('Fetching content items by faculty', { facultyId });
     return this.contentItemRepository

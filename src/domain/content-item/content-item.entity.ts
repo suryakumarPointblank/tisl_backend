@@ -54,6 +54,10 @@ export class ContentItemEntity {
   @Column({ name: 'published_at', type: 'timestamp with time zone', nullable: true }) publishedAt: Date | null;
   @Column({ name: 'is_active', type: 'boolean', default: true }) isActive: boolean;
   @Column({ name: 'is_reviewed', type: 'boolean', default: false }) isReviewed: boolean;
+  // Drives the homepage "Trending this month" section - previously that
+  // section just showed whatever content sat under each therapy area's
+  // first sub-section/first topic, with no way to actually curate it.
+  @Column({ name: 'is_trending', type: 'boolean', default: false }) isTrending: boolean;
   @Column({ name: 'remarks', type: 'text', nullable: true }) remarks: string | null;
   @CreateDateColumn({ name: 'created_at' }) createdAt: Date;
   @UpdateDateColumn({ name: 'updated_at' }) updatedAt: Date;
