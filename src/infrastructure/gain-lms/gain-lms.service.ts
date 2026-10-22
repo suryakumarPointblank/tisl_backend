@@ -69,4 +69,25 @@ export class GainLmsService {
       return EMPTY_ACCESS;
     }
   }
+
+  // Mirrors the old Laravel site's registration flow (LoginController.php),
+  // which called this same endpoint on every new TISL signup so every user
+  // gets a subscriber-level gain account automatically. Password convention
+  // matches what the VISTA/Gain SSO login forms already assume: lastName+"@123".
+  // Best-effort and never throws - a gain outage shouldn't block TISL
+  // registration, and gain's own endpoint already no-ops on a duplicate email.
+  async registerAccount(firstName: string, lastName: string, email: string): Promise<void> {
+    try {
+      const res = await fetch('https://gain.terumoindiaskilllab.com/api/register.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ first_name: firstName, last_name: lastName, email }),
+        signal: AbortSignal.timeout(5000),
+      });
+      const data = await res.json().catch(() => null);
+      this.logger.log('Gain account registration attempted', { email, status: data?.status, message: data?.message });
+    } catch (err) {
+      this.logger.warn('Gain account registration failed, continuing without it', { email, error: err.message });
+    }
+  }
 }

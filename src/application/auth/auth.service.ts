@@ -58,6 +58,7 @@ export class AuthService {
     });
     await this.userRepository.save(user);
     this.logger.log('User registered successfully', { userId: user.id });
+    await this.gainLmsService.registerAccount(user.firstName, user.lastName, user.email);
     return this.generateTokens(user);
   }
 
@@ -149,6 +150,7 @@ export class AuthService {
     });
     await this.userRepository.save(user);
     this.logger.log('User registered successfully via Google', { userId: user.id });
+    await this.gainLmsService.registerAccount(user.firstName, user.lastName, user.email);
     return this.generateTokens(user);
   }
 
