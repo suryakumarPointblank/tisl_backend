@@ -22,6 +22,7 @@ export class HcpConsentService {
     this.logger.log('Creating HCP consent submission', { email: dto.email, consent: dto.consent });
     const entry = this.repo.create({
       name: dto.name,
+      hospitalName: dto.hospitalName,
       email: dto.email,
       phoneNumber: dto.phoneNumber ?? null,
       consent: dto.consent,

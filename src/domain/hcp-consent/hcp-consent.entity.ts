@@ -13,6 +13,12 @@ export class HcpConsentEntity {
   @Column({ type: 'varchar' })
   name: string;
 
+  // Added after 17 rows already existed without it - default lets existing
+  // rows pass the NOT NULL constraint; new submissions always fill it in,
+  // enforced by CreateHcpConsentDto and the form itself.
+  @Column({ name: 'hospital_name', type: 'varchar', default: '' })
+  hospitalName: string;
+
   @Column({ type: 'varchar' })
   email: string;
 
