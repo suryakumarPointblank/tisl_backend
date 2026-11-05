@@ -23,27 +23,31 @@ export class WebinarRegistrationService {
     });
   }
 
-  async register(dto: CreateWebinarRegistrationDto, userId: string): Promise<WebinarRegistrationEntity> {
+  async register(dto: CreateWebinarRegistrationDto, userId?: string): Promise<WebinarRegistrationEntity> {
     this.logger.log('Registering user for webinar', { userId, webinarId: dto.webinarId });
 
-    const existing = await this.registrationRepository.findOne({
-      where: { userId, webinarId: dto.webinarId },
-    });
+    // Guests have no stable identity to dedupe against, so only authenticated
+    // users get the "already registered" check - same as training-program-registrations.
+    if (userId) {
+      const existing = await this.registrationRepository.findOne({
+        where: { userId, webinarId: dto.webinarId },
+      });
 
-    if (existing) {
-      if (existing.status === 'REGISTERED') {
-        throw new ConflictException('Already registered for this webinar');
-      }
-      if (existing.status === 'CANCELLED') {
-        existing.status = 'REGISTERED';
-        const reactivated = await this.registrationRepository.save(existing);
-        await this.notifyRegistration(reactivated);
-        return reactivated;
+      if (existing) {
+        if (existing.status === 'REGISTERED') {
+          throw new ConflictException('Already registered for this webinar');
+        }
+        if (existing.status === 'CANCELLED') {
+          existing.status = 'REGISTERED';
+          const reactivated = await this.registrationRepository.save(existing);
+          await this.notifyRegistration(reactivated);
+          return reactivated;
+        }
       }
     }
 
     const registration = this.registrationRepository.create({
-      userId,
+      userId: userId ?? null,
       webinarId: dto.webinarId,
       firstName: dto.firstName,
       lastName: dto.lastName,

@@ -15,11 +15,11 @@ import { WebinarEntity } from '../webinar/webinar.entity';
 export class WebinarRegistrationEntity {
   @PrimaryGeneratedColumn('uuid') id: string;
 
-  @Column({ name: 'user_id', type: 'uuid' })
+  @Column({ name: 'user_id', type: 'uuid', nullable: true })
   @Index()
-  userId: string;
+  userId: string | null;
 
-  @ManyToOne(() => UserEntity, { onDelete: 'CASCADE' })
+  @ManyToOne(() => UserEntity, { nullable: true, onDelete: 'SET NULL' })
   @JoinColumn({ name: 'user_id' })
   user: UserEntity;
 

@@ -3,6 +3,7 @@ import { ApiTags, ApiOperation, ApiBearerAuth } from '@nestjs/swagger';
 import { WebinarRegistrationService } from './webinar-registration.service';
 import { CreateWebinarRegistrationDto } from './dto/create-webinar-registration.dto';
 import { JwtAuthGuard } from '../../common/guards/jwt-auth.guard';
+import { OptionalJwtGuard } from '../../common/guards/optional-jwt.guard';
 import { GetUser } from '../../common/decorators/get-user.decorator';
 import { UserEntity } from '../user/user.entity';
 
@@ -12,14 +13,13 @@ export class WebinarRegistrationController {
   constructor(private readonly webinarRegistrationService: WebinarRegistrationService) {}
 
   @Post()
-  @UseGuards(JwtAuthGuard)
-  @ApiBearerAuth()
-  @ApiOperation({ summary: 'Register for a webinar' })
+  @UseGuards(OptionalJwtGuard)
+  @ApiOperation({ summary: 'Register for a webinar (guest or authenticated)' })
   async register(
     @Body() dto: CreateWebinarRegistrationDto,
-    @GetUser() user: UserEntity,
+    @GetUser() user?: UserEntity,
   ) {
-    const registration = await this.webinarRegistrationService.register(dto, user.id);
+    const registration = await this.webinarRegistrationService.register(dto, user?.id);
     return {
       message: 'You are registered. A confirmation email will be sent.',
       registration,
