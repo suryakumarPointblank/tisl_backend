@@ -43,26 +43,34 @@ export class GainLmsService {
   async getAccess(email: string): Promise<GainLmsAccess> {
     if (!this.pool || !email) return EMPTY_ACCESS;
     try {
+      // course_X_access_from is only written the first time a user actually
+      // opens that course, so a newly-enrolled user who hasn't clicked in yet
+      // has none of these rows even though they already have access - the
+      // WordPress role granted at enrollment time (wp_capabilities) is the
+      // earlier, authoritative signal, so either one counts as having access.
       const [rows] = await this.pool.query<mysql.RowDataPacket[]>(
         `SELECT
-           MAX(CASE WHEN m.meta_key = 'course_30114_access_from' THEN 1 ELSE 0 END) AS ic,
-           MAX(CASE WHEN m.meta_key = 'course_30734_access_from' THEN 1 ELSE 0 END) AS ir,
+           MAX(CASE WHEN m.meta_key = 'course_30114_access_from' THEN 1 ELSE 0 END) AS ic_course,
+           MAX(CASE WHEN m.meta_key = 'course_30734_access_from' THEN 1 ELSE 0 END) AS ir_course,
            MAX(CASE WHEN m.meta_key = 'course_26791_access_from' THEN 1 ELSE 0 END) AS radial,
-           MAX(CASE WHEN m.meta_key = 'course_31050_access_from' THEN 1 ELSE 0 END) AS nanto
+           MAX(CASE WHEN m.meta_key = 'course_31050_access_from' THEN 1 ELSE 0 END) AS nanto_course,
+           MAX(CASE WHEN m.meta_key = 'wp_capabilities' AND (m.meta_value LIKE '%"vista_ic";b:1;%' OR m.meta_value LIKE '%"vista_ic";i:1;%') THEN 1 ELSE 0 END) AS ic_role,
+           MAX(CASE WHEN m.meta_key = 'wp_capabilities' AND (m.meta_value LIKE '%"vista_ir";b:1;%' OR m.meta_value LIKE '%"vista_ir";i:1;%') THEN 1 ELSE 0 END) AS ir_role,
+           MAX(CASE WHEN m.meta_key = 'wp_capabilities' AND (m.meta_value LIKE '%"nantouser";b:1;%' OR m.meta_value LIKE '%"nantouser";i:1;%') THEN 1 ELSE 0 END) AS nanto_role
          FROM wp_users u
          JOIN wp_usermeta m ON u.ID = m.user_id
          WHERE LOWER(u.user_email) = LOWER(?)
-           AND m.meta_key IN ('course_30114_access_from','course_30734_access_from','course_26791_access_from','course_31050_access_from')`,
+           AND m.meta_key IN ('course_30114_access_from','course_30734_access_from','course_26791_access_from','course_31050_access_from','wp_capabilities')`,
         [email],
       );
       const row = rows[0];
       if (!row) return EMPTY_ACCESS;
       const vista: GainLmsAccess['vista'] = [];
-      if (row.ic) vista.push('IC');
-      if (row.ir) vista.push('IR');
+      if (row.ic_course || row.ic_role) vista.push('IC');
+      if (row.ir_course || row.ir_role) vista.push('IR');
       const gain: GainLmsAccess['gain'] = [];
       if (row.radial) gain.push('Radial Access');
-      if (row.nanto) gain.push('NANTO Model');
+      if (row.nanto_course || row.nanto_role) gain.push('NANTO Model');
       return { vista, gain };
     } catch (err) {
       this.logger.warn('Gain LMS lookup failed, treating as no access', { email, error: err.message });
